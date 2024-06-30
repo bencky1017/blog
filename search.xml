@@ -111,6 +111,65 @@
       </tags>
   </entry>
   <entry>
+    <title>公告</title>
+    <url>/blog/posts/31495/</url>
+    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><div class="note orange icon-padding flat"><i class="note-icon fas fa-magic"></i><p>后续即将添加新功能……</p>
+<ol>
+<li>照片墙添加内容</li>
+<li>电影电视</li>
+<li>嵌入应用</li>
+<li>一言时间轴</li>
+<li>导入博客</li>
+<li>软件资源</li>
+<li>添加侧边栏</li>
+</ol>
+</div>
+
+
+
+<h1 id="照片墙"><a href="#照片墙" class="headerlink" title="照片墙"></a>照片墙</h1><p>整理爬取照片网图数据，上传github</p>
+<div class="note warning flat"><p>直接上传仓库，或者使用图片专用仓库</p>
+</div>
+
+
+
+<h1 id="电影电视"><a href="#电影电视" class="headerlink" title="电影电视"></a>电影电视</h1><p>JerryC的友链里面，有个用户的电影内容，采用了hexo-douban插件，可以实现跳转豆瓣网页内容，分类<code>已看</code>、<code>未看</code>、<code>在看</code>等类型，分为电影、电视剧、动漫等</p>
+<h1 id="嵌入应用"><a href="#嵌入应用" class="headerlink" title="嵌入应用"></a>嵌入应用</h1><p>将一些开发的应用，或者其他源码应用添加进来，使用iframe框架</p>
+<h1 id="一言时间轴"><a href="#一言时间轴" class="headerlink" title="一言时间轴"></a>一言时间轴</h1><p>通过时间轴组件，将一些文案、一言语录添加进来，部分其他视频平台的链接通过直链方式跳转</p>
+<h1 id="导入博客"><a href="#导入博客" class="headerlink" title="导入博客"></a>导入博客</h1><p>各平台已经发布的文章重新导入到博客中，目前涉及平台：博客园，CSDN，华为开发者中心，</p>
+<h1 id="软件资源"><a href="#软件资源" class="headerlink" title="软件资源"></a>软件资源</h1><p>使用蓝奏云、阿里云盘等低限速盘或不限速盘分享软件资源。</p>
+<h1 id="添加侧边栏"><a href="#添加侧边栏" class="headerlink" title="添加侧边栏"></a>添加侧边栏</h1><p>添加侧边栏功能，加入一些常用功能的快速链接跳转，如固定文章等内容</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>demo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/blog/posts/16108/</url>
+    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇帖子。查看 <a href="https://hexo.io/docs/">文档</a> 以了解更多信息。如果你在使用Hexo时遇到任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html">故障排除</a> 中找到答案，也可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
+<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><h3 id="创建新帖子"><a href="#创建新帖子" class="headerlink" title="创建新帖子"></a>创建新帖子</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>更多信息：<a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>更多信息：<a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>更多信息：<a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>更多信息：<a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>demo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python类、实例、方法、继承与模块引用</title>
     <url>/blog/posts/48562/</url>
     <content><![CDATA[<hr>
@@ -472,65 +531,6 @@
       </categories>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>公告</title>
-    <url>/blog/posts/31495/</url>
-    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><div class="note orange icon-padding flat"><i class="note-icon fas fa-magic"></i><p>后续即将添加新功能……</p>
-<ol>
-<li>照片墙添加内容</li>
-<li>电影电视</li>
-<li>嵌入应用</li>
-<li>一言时间轴</li>
-<li>导入博客</li>
-<li>软件资源</li>
-<li>添加侧边栏</li>
-</ol>
-</div>
-
-
-
-<h1 id="照片墙"><a href="#照片墙" class="headerlink" title="照片墙"></a>照片墙</h1><p>整理爬取照片网图数据，上传github</p>
-<div class="note warning flat"><p>直接上传仓库，或者使用图片专用仓库</p>
-</div>
-
-
-
-<h1 id="电影电视"><a href="#电影电视" class="headerlink" title="电影电视"></a>电影电视</h1><p>JerryC的友链里面，有个用户的电影内容，采用了hexo-douban插件，可以实现跳转豆瓣网页内容，分类<code>已看</code>、<code>未看</code>、<code>在看</code>等类型，分为电影、电视剧、动漫等</p>
-<h1 id="嵌入应用"><a href="#嵌入应用" class="headerlink" title="嵌入应用"></a>嵌入应用</h1><p>将一些开发的应用，或者其他源码应用添加进来，使用iframe框架</p>
-<h1 id="一言时间轴"><a href="#一言时间轴" class="headerlink" title="一言时间轴"></a>一言时间轴</h1><p>通过时间轴组件，将一些文案、一言语录添加进来，部分其他视频平台的链接通过直链方式跳转</p>
-<h1 id="导入博客"><a href="#导入博客" class="headerlink" title="导入博客"></a>导入博客</h1><p>各平台已经发布的文章重新导入到博客中，目前涉及平台：博客园，CSDN，华为开发者中心，</p>
-<h1 id="软件资源"><a href="#软件资源" class="headerlink" title="软件资源"></a>软件资源</h1><p>使用蓝奏云、阿里云盘等低限速盘或不限速盘分享软件资源。</p>
-<h1 id="添加侧边栏"><a href="#添加侧边栏" class="headerlink" title="添加侧边栏"></a>添加侧边栏</h1><p>添加侧边栏功能，加入一些常用功能的快速链接跳转，如固定文章等内容</p>
-<hr>
-]]></content>
-      <tags>
-        <tag>demo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/blog/posts/16108/</url>
-    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇帖子。查看 <a href="https://hexo.io/docs/">文档</a> 以了解更多信息。如果你在使用Hexo时遇到任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html">故障排除</a> 中找到答案，也可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
-<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><h3 id="创建新帖子"><a href="#创建新帖子" class="headerlink" title="创建新帖子"></a>创建新帖子</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>更多信息：<a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>更多信息：<a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>更多信息：<a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>更多信息：<a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>demo</tag>
       </tags>
   </entry>
   <entry>
