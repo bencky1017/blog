@@ -25,41 +25,6 @@
       </tags>
   </entry>
   <entry>
-    <title>公告</title>
-    <url>/blog/posts/31495/</url>
-    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><div class="note orange icon-padding flat"><i class="note-icon fas fa-magic"></i><p>后续即将添加新功能……</p>
-<ol>
-<li>照片墙添加内容</li>
-<li>电影电视</li>
-<li>嵌入应用</li>
-<li>一言时间轴</li>
-<li>导入博客</li>
-<li>软件资源</li>
-<li>添加侧边栏</li>
-</ol>
-</div>
-
-
-
-<h1 id="照片墙"><a href="#照片墙" class="headerlink" title="照片墙"></a>照片墙</h1><p>整理爬取照片网图数据，上传github</p>
-<div class="note warning flat"><p>直接上传仓库，或者使用图片专用仓库</p>
-</div>
-
-
-
-<h1 id="电影电视"><a href="#电影电视" class="headerlink" title="电影电视"></a>电影电视</h1><p>JerryC的友链里面，有个用户的电影内容，采用了hexo-douban插件，可以实现跳转豆瓣网页内容，分类<code>已看</code>、<code>未看</code>、<code>在看</code>等类型，分为电影、电视剧、动漫等</p>
-<h1 id="嵌入应用"><a href="#嵌入应用" class="headerlink" title="嵌入应用"></a>嵌入应用</h1><p>将一些开发的应用，或者其他源码应用添加进来，使用iframe框架</p>
-<h1 id="一言时间轴"><a href="#一言时间轴" class="headerlink" title="一言时间轴"></a>一言时间轴</h1><p>通过时间轴组件，将一些文案、一言语录添加进来，部分其他视频平台的链接通过直链方式跳转</p>
-<h1 id="导入博客"><a href="#导入博客" class="headerlink" title="导入博客"></a>导入博客</h1><p>各平台已经发布的文章重新导入到博客中，目前涉及平台：博客园，CSDN，华为开发者中心，</p>
-<h1 id="软件资源"><a href="#软件资源" class="headerlink" title="软件资源"></a>软件资源</h1><p>使用蓝奏云、阿里云盘等低限速盘或不限速盘分享软件资源。</p>
-<h1 id="添加侧边栏"><a href="#添加侧边栏" class="headerlink" title="添加侧边栏"></a>添加侧边栏</h1><p>添加侧边栏功能，加入一些常用功能的快速链接跳转，如固定文章等内容</p>
-<hr>
-]]></content>
-      <tags>
-        <tag>demo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python类、实例、方法、继承与模块引用</title>
     <url>/blog/posts/48562/</url>
     <content><![CDATA[<hr>
@@ -421,6 +386,41 @@
       </categories>
       <tags>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>公告</title>
+    <url>/blog/posts/31495/</url>
+    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><div class="note orange icon-padding flat"><i class="note-icon fas fa-magic"></i><p>后续即将添加新功能……</p>
+<ol>
+<li>照片墙添加内容</li>
+<li>电影电视</li>
+<li>嵌入应用</li>
+<li>一言时间轴</li>
+<li>导入博客</li>
+<li>软件资源</li>
+<li>添加侧边栏</li>
+</ol>
+</div>
+
+
+
+<h1 id="照片墙"><a href="#照片墙" class="headerlink" title="照片墙"></a>照片墙</h1><p>整理爬取照片网图数据，上传github</p>
+<div class="note warning flat"><p>直接上传仓库，或者使用图片专用仓库</p>
+</div>
+
+
+
+<h1 id="电影电视"><a href="#电影电视" class="headerlink" title="电影电视"></a>电影电视</h1><p>JerryC的友链里面，有个用户的电影内容，采用了hexo-douban插件，可以实现跳转豆瓣网页内容，分类<code>已看</code>、<code>未看</code>、<code>在看</code>等类型，分为电影、电视剧、动漫等</p>
+<h1 id="嵌入应用"><a href="#嵌入应用" class="headerlink" title="嵌入应用"></a>嵌入应用</h1><p>将一些开发的应用，或者其他源码应用添加进来，使用iframe框架</p>
+<h1 id="一言时间轴"><a href="#一言时间轴" class="headerlink" title="一言时间轴"></a>一言时间轴</h1><p>通过时间轴组件，将一些文案、一言语录添加进来，部分其他视频平台的链接通过直链方式跳转</p>
+<h1 id="导入博客"><a href="#导入博客" class="headerlink" title="导入博客"></a>导入博客</h1><p>各平台已经发布的文章重新导入到博客中，目前涉及平台：博客园，CSDN，华为开发者中心，</p>
+<h1 id="软件资源"><a href="#软件资源" class="headerlink" title="软件资源"></a>软件资源</h1><p>使用蓝奏云、阿里云盘等低限速盘或不限速盘分享软件资源。</p>
+<h1 id="添加侧边栏"><a href="#添加侧边栏" class="headerlink" title="添加侧边栏"></a>添加侧边栏</h1><p>添加侧边栏功能，加入一些常用功能的快速链接跳转，如固定文章等内容</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>demo</tag>
       </tags>
   </entry>
   <entry>
@@ -1465,6 +1465,36 @@
 
 <p>此方法主要使用在出现操作不生效，会清除缓存文件<code>db.json</code>和静态文件<code>public</code></p>
 <hr>
+<h1 id="插入豆瓣电影页面（Douban）"><a href="#插入豆瓣电影页面（Douban）" class="headerlink" title="插入豆瓣电影页面（Douban）"></a>插入豆瓣电影页面（Douban）</h1><p>安装依赖库：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-douban --save</span><br></pre></td></tr></table></figure>
+
+<p>在博客的配置文件中：<code>_config.yml</code>配置豆瓣电影的数据</p>
+<h2 id="精简配置"><a href="#精简配置" class="headerlink" title="精简配置"></a>精简配置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">douban:</span><br><span class="line">  id: 162448367</span><br><span class="line">  book:</span><br><span class="line">    title: &quot;This is my book title&quot;</span><br><span class="line">  movie:</span><br><span class="line">    title: &quot;This is my movie title&quot;</span><br><span class="line">  game:</span><br><span class="line">    title: &quot;This is my game title&quot;</span><br><span class="line">  song:</span><br><span class="line">    title: &quot;This is my song title&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="完整配置"><a href="#完整配置" class="headerlink" title="完整配置"></a>完整配置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">douban:</span><br><span class="line">  id: 162448367</span><br><span class="line">  builtin: false</span><br><span class="line">  dynamic: false</span><br><span class="line">  item_per_page: 10</span><br><span class="line">  meta_max_line: 4</span><br><span class="line">  customize_layout: page</span><br><span class="line">  swup: false</span><br><span class="line">  book:</span><br><span class="line">    path: books/index.html</span><br><span class="line">    title: &quot;This is my book title&quot;</span><br><span class="line">    quote: &quot;This is my book quote&quot;</span><br><span class="line">    actions:</span><br><span class="line">      - do</span><br><span class="line">      - wish</span><br><span class="line">      - collect</span><br><span class="line">    option:</span><br><span class="line">  movie:</span><br><span class="line">    path: movies/index.html</span><br><span class="line">    title: &quot;This is my movie title&quot;</span><br><span class="line">    quote: &quot;This is my movie quote&quot;</span><br><span class="line">    actions:</span><br><span class="line">      - do</span><br><span class="line">      - wish</span><br><span class="line">      - collect</span><br><span class="line">    option:</span><br><span class="line">  game:</span><br><span class="line">    path: games/index.html</span><br><span class="line">    title: &quot;This is my game title&quot;</span><br><span class="line">    quote: &quot;This is my game quote&quot;</span><br><span class="line">    actions:</span><br><span class="line">      - do</span><br><span class="line">      - wish</span><br><span class="line">      - collect</span><br><span class="line">    option:</span><br><span class="line">  song:</span><br><span class="line">    path: songs/index.html</span><br><span class="line">    title: &quot;This is my song title&quot;</span><br><span class="line">    quote: &quot;This is my song quote&quot;</span><br><span class="line">    actions:</span><br><span class="line">      - do</span><br><span class="line">      - wish</span><br><span class="line">      - collect</span><br><span class="line">    option:</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>id</strong>: 你的豆瓣 ID(纯数字格式，不是自定义的域名)。获取方法可以参考<a href="https://www.zhihu.com/question/19634899">怎样获取豆瓣的数字 ID ？</a></li>
+<li><strong>builtin</strong>: 是否将<code>hexo douban</code>命令默认嵌入进<code>hexo g</code>、<code>hexo s</code>，使其自动执行<code>hexo douban</code> 命令。默认关闭。</li>
+<li><strong>dynamic</strong>: 豆瓣页面是否在访问时实时请求接口。默认为 false，表示页面信息会在执行 hexo douban 命令时更新，优点是生成的页面不会受到后续接口可用性的影响，缺点是需要手动更新。如果设置为 true ，则会在页面访问时实时调用接口进行渲染，无需执行 hexo douban 命令更新页面，但是代价就是如果接口挂了，页面就会G。</li>
+<li><strong>item_per_page</strong>: 每页展示的条目数，默认 10 。</li>
+<li><strong>meta_max_line</strong>: 每个条目展示的详细信息的最大行数，超过该行数则会以 “…” 省略，默认 4 。</li>
+<li><strong>customize_layout</strong>: 自定义布局文件。默认值为 page 。无特别需要，留空即可。若配置为 <code>abcd</code>，则表示指定 <code>//theme/hexo-theme/layout/abcd.ejs</code> 文件渲染豆瓣页面。</li>
+<li><strong>swup</strong>: 是否兼容 <a href="https://swup.js.org/plugins/scripts-plugin/">swup</a> 。支持 script 热加载，解决一些 single-page 主题的加载问题，默认 false 。</li>
+<li><strong>path</strong>: 生成页面后的路径，默认生成在 &#x2F;&#x2F;yourblog&#x2F;books&#x2F;index.html 等下面。如需自定义路径，则可以修改这里。</li>
+<li><strong>title</strong>: 该页面的标题。</li>
+<li><strong>quote</strong>: 写在页面开头的一段话,支持 html 语法，可以为空。</li>
+<li><strong>actions</strong>: 一个字符串列表，表示生成的页面中的”已 X”，”想 X”,”X 过”的标签配置，默认会自动聚焦在第一个标签。可选项为: ‘do’,’wish’,’collect’。</li>
+<li><strong>option</strong>: 该页面额外的 Front-matter 配置，参考<a href="https://hexo.io/docs/front-matter.html">Hexo 文档</a>。无特别需要，留空即可。</li>
+</ul>
+<p>如果只想显示某一个页面(比如 movie)，那就把其他的配置项注释掉即可。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>使用帮助文档：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo douban -h</span><br><span class="line">Usage: hexo douban</span><br><span class="line"></span><br><span class="line">Description:</span><br><span class="line">Generate pages from douban</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -b, --books   Generate douban books only</span><br><span class="line">  -g, --games   Generate douban games only</span><br><span class="line">  -m, --movies  Generate douban movies only</span><br><span class="line">  -s, --songs   Generate douban songs only</span><br></pre></td></tr></table></figure>
+
+<p>主动生成豆瓣页面：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo douban</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  0 (wish), 0 (<span class="keyword">do</span>),0 (collect) game loaded <span class="keyword">in</span> 729 ms</span><br><span class="line">INFO  0 (wish), 0 (<span class="keyword">do</span>),20 (collect) song loaded <span class="keyword">in</span> 761 ms</span><br><span class="line">INFO  2 (wish), 0 (<span class="keyword">do</span>),136 (collect) book loaded <span class="keyword">in</span> 940 ms</span><br><span class="line">INFO  30 (wish), 0 (<span class="keyword">do</span>),6105 (collect) movie loaded <span class="keyword">in</span> 4129 ms</span><br><span class="line">INFO  Generated: books/index.html</span><br><span class="line">INFO  Generated: movies/index.html</span><br><span class="line">INFO  Generated: games/index.html</span><br><span class="line">INFO  Generated: songs/index.html</span><br></pre></td></tr></table></figure>
+
+<p>如果不加参数，生成的是四个类型的配置</p>
 ]]></content>
       <categories>
         <category>教程</category>
