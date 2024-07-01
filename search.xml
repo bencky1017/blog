@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/blog/posts/16108/</url>
+    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇帖子。查看 <a href="https://hexo.io/docs/">文档</a> 以了解更多信息。如果你在使用Hexo时遇到任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html">故障排除</a> 中找到答案，也可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
+<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><h3 id="创建新帖子"><a href="#创建新帖子" class="headerlink" title="创建新帖子"></a>创建新帖子</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>更多信息：<a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>更多信息：<a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>更多信息：<a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>更多信息：<a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>demo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue-cli脚手架创建vue3项目</title>
     <url>/blog/posts/38573/</url>
     <content><![CDATA[<p><font size=5 color=#f33b45><strong>Vue-cli脚手架创建vue3项目</strong></font></p>
@@ -141,30 +165,6 @@
 <h1 id="添加侧边栏"><a href="#添加侧边栏" class="headerlink" title="添加侧边栏"></a>添加侧边栏</h1><p>添加侧边栏功能，加入一些常用功能的快速链接跳转，如固定文章等内容</p>
 <hr>
 ]]></content>
-      <tags>
-        <tag>demo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/blog/posts/16108/</url>
-    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇帖子。查看 <a href="https://hexo.io/docs/">文档</a> 以了解更多信息。如果你在使用Hexo时遇到任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html">故障排除</a> 中找到答案，也可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
-<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><h3 id="创建新帖子"><a href="#创建新帖子" class="headerlink" title="创建新帖子"></a>创建新帖子</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>更多信息：<a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>更多信息：<a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>更多信息：<a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>更多信息：<a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
       <tags>
         <tag>demo</tag>
       </tags>
@@ -1131,6 +1131,65 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo douban</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  0 (wish), 0 (<span class="keyword">do</span>),0 (collect) game loaded <span class="keyword">in</span> 729 ms</span><br><span class="line">INFO  0 (wish), 0 (<span class="keyword">do</span>),20 (collect) song loaded <span class="keyword">in</span> 761 ms</span><br><span class="line">INFO  2 (wish), 0 (<span class="keyword">do</span>),136 (collect) book loaded <span class="keyword">in</span> 940 ms</span><br><span class="line">INFO  30 (wish), 0 (<span class="keyword">do</span>),6105 (collect) movie loaded <span class="keyword">in</span> 4129 ms</span><br><span class="line">INFO  Generated: books/index.html</span><br><span class="line">INFO  Generated: movies/index.html</span><br><span class="line">INFO  Generated: games/index.html</span><br><span class="line">INFO  Generated: songs/index.html</span><br></pre></td></tr></table></figure>
 
 <p>如果不加参数，生成的是四个类型的配置</p>
+<hr>
+<h1 id="添加Artitalk说说"><a href="#添加Artitalk说说" class="headerlink" title="添加Artitalk说说"></a>添加Artitalk说说</h1><p>Artitalk官网： <a href="https://artitalk.js.org/">Artitalk</a> </p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装依赖插件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-butterfly-artitalk</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>LeanCloud 配置 參考 <a href="https://artitalk.js.org/doc.html#%F0%9F%8C%88-leancloud-%E7%9A%84%E7%9B%B8%E5%85%B3%E5%87%86%E5%A4%87">Artitalk 文档 - LeanCloud 的相关准备</a> </p>
+<blockquote>
+<p>添加配置</p>
+</blockquote>
+<p>可以在Hexo配置文件<code>_config.yml</code>或者在主题的配置文件<code>_config.xxxxxx.yml</code>中进行添加</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Artitalk</span></span><br><span class="line"><span class="comment"># see https://artitalk.js.org/</span></span><br><span class="line"><span class="attr">artitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">appId:</span></span><br><span class="line">  <span class="attr">appKey:</span></span><br><span class="line">  <span class="attr">path:</span></span><br><span class="line">  <span class="attr">js:</span></span><br><span class="line">  <span class="attr">option:</span></span><br><span class="line">  <span class="attr">front_matter:</span></span><br></pre></td></tr></table></figure>
+
+<p>参数描述：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>appId</td>
+<td>【必须】LeanCloud 创建的应用中的 AppID</td>
+</tr>
+<tr>
+<td>appKey</td>
+<td>【必须】LeanCloud 创建的应用中的 AppKEY</td>
+</tr>
+<tr>
+<td>path</td>
+<td>【可选】Artitalk 的路径名称（默认为 <code>artitalk</code>，生成的页面为 artitalk&#x2F;index.html）</td>
+</tr>
+<tr>
+<td>js</td>
+<td>【可选】更換 Artitalk 的 js CDN（默认为 <code>https://cdn.jsdelivr.net/npm/artitalk</code>）</td>
+</tr>
+<tr>
+<td>option</td>
+<td>【可选】Artitalk 需要的额外配置，如<code>lang: zh</code></td>
+</tr>
+<tr>
+<td>front_matter</td>
+<td>【可选】Artitalk 页面的 front_matter 配置</td>
+</tr>
+</tbody></table>
+<h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><p>在博客根目录下面创建目录：<code>/source/shuoshuo/</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page shuoshuo</span><br></pre></td></tr></table></figure>
+
+<p>并在页面的Front-matter配置：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: shuoshuo</span><br><span class="line">date: 2024-07-01 22:02:40</span><br><span class="line">updated: 2024-07-01 22:02:40</span><br><span class="line">type: &quot;artitalk&quot;</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Artitalk 说说系统</span></span><br><span class="line"><span class="comment"># see https://artitalk.js.org/</span></span><br><span class="line"><span class="attr">artitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="string">KhuCxxxxxxxxxxxxxxxxxDvg-xxxxxxx</span></span><br><span class="line">  <span class="attr">appKey:</span> <span class="string">ijKxxxxxxxxxxxxxxxxxopgy</span> <span class="comment"># </span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">shuoshuo</span>	<span class="comment"># 就这个path，不能写“/”</span></span><br><span class="line">  <span class="attr">js:</span></span><br><span class="line">  <span class="attr">option:</span></span><br><span class="line">    <span class="attr">lang:</span> <span class="string">zh</span></span><br><span class="line">  <span class="attr">front_matter:</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>配置成功后，会显示系统的默认提示说说内容</p>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>登录后，点击右上角的删除按钮可以删除此条说说</p>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>点击头像，进入修改界面，保存后可以实现修改</p>
+<h3 id="评论回复"><a href="#评论回复" class="headerlink" title="评论回复"></a>评论回复</h3><p>点击右下角的评论内容，可以进行评论，输入邮箱可以自动获取头像</p>
+<hr>
 ]]></content>
       <categories>
         <category>教程</category>
