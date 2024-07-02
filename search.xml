@@ -1,0 +1,1566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/blog/posts/16108/</url>
+    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇帖子。查看 <a href="https://hexo.io/docs/">文档</a> 以了解更多信息。如果你在使用Hexo时遇到任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html">故障排除</a> 中找到答案，也可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
+<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><h3 id="创建新帖子"><a href="#创建新帖子" class="headerlink" title="创建新帖子"></a>创建新帖子</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>更多信息：<a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>更多信息：<a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>更多信息：<a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>更多信息：<a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>demo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python类、实例、方法、继承与模块引用</title>
+    <url>/blog/posts/48562/</url>
+    <content><![CDATA[<hr>
+<p><font size=5 color=#f33b45><strong>Python类、实例、方法、继承与模块引用</strong></font></p>
+<p><font size=4 color=#3399ea><strong>原创：丶无殇&emsp;&emsp;2023-02-16</strong></font></p>
+<hr>
+<h1 id="Python类"><a href="#Python类" class="headerlink" title="Python类"></a>Python类</h1><p>包含：属性 attribute、方法 method</p>
+<p>一个人的身高、体重和年龄，这些都是属性，而吃饭、说话和洗澡都是方法</p>
+<p><code>类</code>和<code>实例对象</code>是有区别的，类是抽象，是模板，而<code>实例</code>则是根据类创建的对象</p>
+<p>比如类：动物，只是一个抽象，并没有动物的详细信息，而猫、狗等，则是具体的动物，是类的对象。</p>
+<p><strong>在class外部定义的可执行函数叫做function，类内部的函数叫做方法method</strong></p>
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><p>类名开头大写，无括号，在<strong>Python3</strong>中<code>Person</code>、<code>Person()</code>、<code>Person(object)</code>，效果一样，但在<strong>Python2</strong>中需要写成<code>Person(object)</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>: <span class="comment"># Person/Person()/Person(object)</span></span><br></pre></td></tr></table></figure>
+
+<p>换行缩进后定义属性和方法，属性为变量；方法的定义和函数一样（def开头）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="comment"># 属性</span></span><br><span class="line">    name=<span class="string">&#x27;zhangsan&#x27;</span></span><br><span class="line">    age=<span class="number">29</span></span><br><span class="line">    height=<span class="number">1.82</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">self</span>):<span class="comment"># 打招呼方法</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;你好，我叫<span class="subst">&#123;self.name&#125;</span>，我今年<span class="subst">&#123;self.age&#125;</span>岁&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建实例</span></span><br><span class="line">p1=Person()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用方法</span></span><br><span class="line">p1.greet()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">你好，我叫zhangsan，我今年<span class="number">29</span>岁</span><br></pre></td></tr></table></figure>
+
+<p>类的定义是一个具体实例（instance）的设计蓝图，在创建实例的时候，只需要调用<code>类名()</code>就可以了</p>
+<p><code>p1.greet()</code>是方法调用的示范，在实例后面加上<code>.</code>可以调用<code>方法</code>和<code>属性</code>，如<code>p1.name</code></p>
+<h2 id="类的编写规范"><a href="#类的编写规范" class="headerlink" title="类的编写规范"></a>类的编写规范</h2><p>类名使用：大骆驼命名法（UpperCamelCase）</p>
+<p>实例和模块名：蛇形命名法（snake_case）</p>
+<h2 id="特殊参数self"><a href="#特殊参数self" class="headerlink" title="特殊参数self"></a>特殊参数self</h2><p>特殊参数<code>self</code>会指向实例本身</p>
+<p><code>self.name</code>—&gt;当前被创建实例的<code>name</code>属性</p>
+<h2 id="字符串格式化输出"><a href="#字符串格式化输出" class="headerlink" title="字符串格式化输出"></a>字符串格式化输出</h2><h3 id="方法一：-s-d-f"><a href="#方法一：-s-d-f" class="headerlink" title="方法一：%s&#x2F;%d&#x2F;%f"></a>方法一：<code>%s</code>&#x2F;<code>%d</code>&#x2F;<code>%f</code></h3><p>print时候用格式化符号<code>%s</code>&#x2F;<code>%d</code>&#x2F;<code>%f</code>占位，字符串后面紧接<code>%()</code>，括号中为对应的参数名称</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="comment"># 属性</span></span><br><span class="line">    name=<span class="string">&#x27;zhangsan&#x27;</span></span><br><span class="line">    age=<span class="number">29</span></span><br><span class="line">    height=<span class="number">1.82</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">self</span>):<span class="comment"># 打招呼方法</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;你好，我叫%s，我今年%d岁,身高是%.2f米&quot;</span>%(self.name,self.age,self.height))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建实例</span></span><br><span class="line">p1=Person()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用方法</span></span><br><span class="line">p1.greet()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">你好，我叫zhangsan，我今年<span class="number">29</span>岁,身高是<span class="number">1.82</span>米</span><br></pre></td></tr></table></figure>
+
+<h3 id="方法二：f-表达式-格式化-Python3-6新增"><a href="#方法二：f-表达式-格式化-Python3-6新增" class="headerlink" title="方法二：f&#39;{表达式:格式化}&#39;[Python3.6新增]"></a>方法二：<code>f&#39;&#123;</code>表达式<code>:</code>格式化<code>&#125;&#39;</code><del>[Python3.6新增]</del></h3><p>在输出内容的前面加上<code>f</code>，内容中需要变量的地方使用<code>&#123;&#125;</code>即可</p>
+<p>参数为<code>浮点数</code>时候可以使用<code>:.2f</code>来设置浮点数的格式</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="comment"># 属性</span></span><br><span class="line">    name=<span class="string">&#x27;zhangsan&#x27;</span></span><br><span class="line">    age=<span class="number">29</span></span><br><span class="line">    height=<span class="number">1.823</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">self</span>):<span class="comment"># 打招呼方法</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;你好，我叫<span class="subst">&#123;self.name&#125;</span>，我今年<span class="subst">&#123;self.age&#125;</span>岁，身高是<span class="subst">&#123;self.height:<span class="number">.2</span>f&#125;</span>米&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建实例</span></span><br><span class="line">p1=Person()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用方法</span></span><br><span class="line">p1.greet()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">你好，我叫zhangsan，我今年<span class="number">29</span>岁,身高是<span class="number">1.82</span>米</span><br></pre></td></tr></table></figure>
+
+<h3 id="方法三：-format语法"><a href="#方法三：-format语法" class="headerlink" title="方法三：.format语法"></a>方法三：<code>.format</code>语法</h3><p>使用<code>&#123;&#125;</code>占位，字符串后接<code>.format()</code>，括号中为对应的参数名称</p>
+<p>参数为<code>浮点数</code>时候使用<code>&#123;:.2f&#125;</code>设置浮点数的格式</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="comment"># 属性</span></span><br><span class="line">    name=<span class="string">&#x27;zhangsan&#x27;</span></span><br><span class="line">    age=<span class="number">29</span></span><br><span class="line">    height=<span class="number">1.823</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">self</span>):<span class="comment"># 打招呼方法</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;你好，我叫&#123;&#125;，我今年&#123;&#125;岁，身高是&#123;:.2f&#125;米&quot;</span>.<span class="built_in">format</span>(self.name,self.age,self.height))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建实例</span></span><br><span class="line">p1=Person()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用方法</span></span><br><span class="line">p1.greet()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">你好，我叫zhangsan，我今年<span class="number">29</span>岁,身高是<span class="number">1.82</span>米</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="初始化方法-init"><a href="#初始化方法-init" class="headerlink" title="初始化方法__init__()"></a>初始化方法__init__()</h2><h3 id="init-self-方法"><a href="#init-self-方法" class="headerlink" title="__init__(self)方法"></a>__init__(self)方法</h3><p><code>__init__</code> 是 Python 中的特殊方法（special method），它用于初始化对象，在实例别创建后最先调用的函数，第一参数永远是<code>self</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="comment"># 初始化方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.name = <span class="string">&#x27;张三&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 自定义方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;你好，我是&#x27;</span>+self.name)</span><br><span class="line"></span><br><span class="line">p1=Person()</span><br><span class="line">p1.greet()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">你好，我是张三</span><br></pre></td></tr></table></figure>
+
+<h3 id="init-方法添加参数"><a href="#init-方法添加参数" class="headerlink" title="__init__方法添加参数"></a>__init__方法添加参数</h3><p>在初始化方法中的参数，为<code>必填参数</code>，创建实例的时候不填写会报错</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="comment"># 初始化方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,init_name</span>):</span><br><span class="line">        self.name = init_name</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 自定义方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;你好，我是&#x27;</span>+self.name)</span><br><span class="line"></span><br><span class="line">p1=Person(<span class="string">&#x27;李四&#x27;</span>)</span><br><span class="line">p1.greet()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">你好，我是李四</span><br></pre></td></tr></table></figure>
+
+<h3 id="init-方法添加任意参数"><a href="#init-方法添加任意参数" class="headerlink" title="__init__方法添加任意参数"></a>__init__方法添加任意参数</h3><p>目前的方法只能传递固定个数的参数，如果想要传递任意参数，如：自定义求平均数的<code>average()</code>方法，使用时候可以是<code>average(22,33,45)</code>，也可以是<code>average(2,6,8,5,6,9,10)</code></p>
+<p>详情见：<a href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0">可变参数</a></p>
+<h2 id="属性修改"><a href="#属性修改" class="headerlink" title="属性修改"></a>属性修改</h2><h3 id="修改类属性"><a href="#修改类属性" class="headerlink" title="修改类属性"></a>修改类属性</h3><p>创建好<code>Person</code>类后，设置类属性<code>count</code>，每创建一个实例<code>count+1</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="comment"># 类属性</span></span><br><span class="line">    count=<span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 初始化方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        Person.count+=<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 实例化对象</span></span><br><span class="line">p1=Person()</span><br><span class="line">p2=Person()</span><br><span class="line">p3=Person()</span><br><span class="line"><span class="built_in">print</span>(Person.count)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改实例属性"><a href="#修改实例属性" class="headerlink" title="修改实例属性"></a>修改实例属性</h3><p>在创建好实例<code>p1</code>后，修改它的属性</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 修改实例属性</span></span><br><span class="line">p1.age=<span class="number">21</span></span><br><span class="line"><span class="built_in">print</span>(p1.age)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除实例属性</span></span><br><span class="line"><span class="keyword">del</span> Person.height</span><br><span class="line"><span class="built_in">print</span>(Person.height)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除实例</span></span><br><span class="line"><span class="keyword">del</span> p1</span><br><span class="line"><span class="built_in">print</span>(p1)</span><br></pre></td></tr></table></figure>
+
+<p>删除只能通过删除类属性实现，<code>不能直接删除</code>实例属性</p>
+<p>删除方法除了<code>del</code>还可以使用<code>delattr()</code>函数</p>
+<p><code>delattr(ClassName,Attribute) </code>相等于 <code>del ClassName.Attribute</code></p>
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 删除属性，报错内容</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">AttributeError: <span class="string">&#x27;Person&#x27;</span> <span class="built_in">object</span> has no attribute <span class="string">&#x27;height&#x27;</span></span><br><span class="line"><span class="comment"># 表示已经删除了&#x27;Person.height&#x27;属性</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除实例，报错内容</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">NameError: name <span class="string">&#x27;p1&#x27;</span> <span class="keyword">is</span> <span class="keyword">not</span> defined</span><br><span class="line"><span class="comment">#表示已经删除了&#x27;p1&#x27;实例对象</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="类属性和实例属性的优先级"><a href="#类属性和实例属性的优先级" class="headerlink" title="类属性和实例属性的优先级"></a>类属性和实例属性的优先级</h2><p>类属性优先级<code>高于</code>实例属性，无法通过实例修改类属性，修改的只是对应的实例属性</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    localtion = <span class="string">&#x27;Asia&#x27;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,localtion</span>):</span><br><span class="line">        self.localtion = localtion</span><br><span class="line"></span><br><span class="line">dog = Animal(<span class="string">&#x27;GuangDong&#x27;</span>)</span><br><span class="line">cat = Animal(<span class="string">&#x27;Africa&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(dog.localtion)		<span class="comment"># ==&gt; GuangDong</span></span><br><span class="line"><span class="built_in">print</span>(cat.localtion)		<span class="comment"># ==&gt; Africa</span></span><br><span class="line"></span><br><span class="line">cat.localtion=<span class="string">&#x27;ChongQing&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(cat.localtion)		<span class="comment"># ==&gt; ChongQing</span></span><br><span class="line"><span class="built_in">print</span>(Animal.localtion)		<span class="comment"># ==&gt; Asia</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">GuangDong</span><br><span class="line">Africa</span><br><span class="line">ChongQing</span><br><span class="line">Asia</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="保护属性与私有属性"><a href="#保护属性与私有属性" class="headerlink" title="保护属性与私有属性"></a>保护属性与私有属性</h2><h3 id="保护属性：-xxx"><a href="#保护属性：-xxx" class="headerlink" title="保护属性：_xxx"></a>保护属性：_xxx</h3><p>单下划线开头的属性，只有类实例和子类实例可以访问，不能通过<code>from module import *</code>导入，保护属性，不建议调用访问，不会被代码提示工具显示，但是可以直接访问</p>
+<h3 id="私有属性：-xxx"><a href="#私有属性：-xxx" class="headerlink" title="私有属性：__xxx"></a>私有属性：__xxx</h3><p>双下划线开头的属性&#x2F;方法，只有类对象自己能访问，子类对象无法访问</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#-*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):<span class="comment"># 系统定义方法</span></span><br><span class="line">        self.string=<span class="string">&#x27;A string&#x27;</span>			<span class="comment"># 公有属性</span></span><br><span class="line">        self._string=<span class="string">&#x27;A _string&#x27;</span>		<span class="comment"># 保护属性</span></span><br><span class="line">        self.__string=<span class="string">&#x27;A __string&#x27;</span>		<span class="comment"># 私有属性</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self.string + <span class="string">&#x27; fun-A&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_fun</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self._string+<span class="string">&#x27;  _fun-A&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__fun</span>(<span class="params">self</span>):<span class="comment"># 私有方法</span></span><br><span class="line">        <span class="keyword">return</span> self.__string+<span class="string">&#x27; __fun-A&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">for__fun</span>(<span class="params">self</span>):<span class="comment"># 内部调用私有方法</span></span><br><span class="line">        <span class="keyword">return</span> self.__fun()</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span>(<span class="title class_ inherited__">A</span>):<span class="comment"># A的子类</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):<span class="comment"># 系统定义方法</span></span><br><span class="line">        self.string = <span class="string">&#x27;B string&#x27;</span></span><br><span class="line"></span><br><span class="line">a=A()</span><br><span class="line"><span class="built_in">print</span>(a.string)</span><br><span class="line"><span class="built_in">print</span>(a._string)</span><br><span class="line"><span class="comment"># print(a.__string)# 不可访问</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(a.fun())</span><br><span class="line"><span class="built_in">print</span>(a._fun())</span><br><span class="line"><span class="comment"># print(a.__fun())# 不可访问</span></span><br><span class="line"><span class="built_in">print</span>(a.for__fun())</span><br><span class="line"></span><br><span class="line">b=B()</span><br><span class="line"><span class="built_in">print</span>(b.fun())</span><br><span class="line"><span class="built_in">print</span>(b.fun().__len__())<span class="comment"># 系统定义函数</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A string</span><br><span class="line">A _string</span><br><span class="line">A string fun-A</span><br><span class="line">A _string  _fun-A</span><br><span class="line">A __string __fun-A</span><br><span class="line">B string fun-A</span><br><span class="line"><span class="number">14</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="访问操作私有属性"><a href="#访问操作私有属性" class="headerlink" title="访问操作私有属性"></a>访问操作私有属性</h3><p>通过<code>实例方法</code>调用<code>私有属性</code>，可以实现访问和修改等操作</p>
+<p>在外部调用实例方法时，是不需要显式传递self参数的</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    <span class="comment"># 初始化方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,age</span>):</span><br><span class="line">        self.__name=name</span><br><span class="line">        self.__age=age</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取信息</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_info</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;name=&#123;&#125;,age=&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(self.__name,self.__age)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 修改信息</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_info</span>(<span class="params">self,name,age</span>):</span><br><span class="line">        self.__name=name</span><br><span class="line">        self.__age=age</span><br><span class="line">        </span><br><span class="line"><span class="comment"># 实例化对象</span></span><br><span class="line">dog=Animal(<span class="string">&#x27;wc&#x27;</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(dog.get_info())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用实例方法修改私有属性</span></span><br><span class="line">dog.set_info(<span class="string">&#x27;nidie&#x27;</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(dog.get_info())</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name=wc,age=<span class="number">2</span></span><br><span class="line">name=nidie,age=<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="强制访问私有属性"><a href="#强制访问私有属性" class="headerlink" title="强制访问私有属性"></a><span id="强制访问私有属性">强制访问私有属性</span></h3><p>通过实例强制访问私有属性：<code>实例名._类名__属性名</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    <span class="comment"># 初始化方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,age</span>):</span><br><span class="line">        self.__name=name</span><br><span class="line">        self.__age=age</span><br><span class="line">        </span><br><span class="line"><span class="comment"># 实例化对象</span></span><br><span class="line">dog=Animal(<span class="string">&#x27;wangwang&#x27;</span>,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 强制访问私有属性</span></span><br><span class="line"><span class="built_in">print</span>(dog._Animal__name)</span><br><span class="line"><span class="built_in">print</span>(dog._Animal__age)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">wangwang</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="类方法"><a href="#类方法" class="headerlink" title="类方法"></a>类方法</h2><h3 id="类方法和实例方法的区别"><a href="#类方法和实例方法的区别" class="headerlink" title="类方法和实例方法的区别"></a>类方法和实例方法的区别</h3><p>操作实例对象的属性可以使用<code>实例方法</code>，如果需要操作类的属性，就需要使用<code>类方法</code></p>
+<p>类方法需要使用装饰器<code>@classmethod</code></p>
+<p>与实例方法不同的是：</p>
+<blockquote>
+<ol>
+<li>类方法需要使用@classmethod来标记为类方法，否则定义的还是实例方法</li>
+<li>类方法的第一个参数将传入类本身，通常将参数名命名为 cls，上面的 cls.__localtion 实际上相当于Animal.__localtion</li>
+<li>类方法无法获得任何实例属性，只能获得类的引用</li>
+</ol>
+</blockquote>
+<h3 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h3><p>在类<code>Animal</code>中，创建实例<code>dog,cat</code>，可以通过该<code>实例</code>调用的方法，如<code>dog.get_info</code>等</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding=utf-8 -*-</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    <span class="comment"># 私有属性</span></span><br><span class="line">    __count=<span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 初始化方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,age</span>):</span><br><span class="line">        self.name=name</span><br><span class="line">        self.age=age</span><br><span class="line">        Animal.__count+=<span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 实例方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_info</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;我是&#123;&#125;，今年&#123;&#125;岁了。总计数：&#123;&#125;个&#x27;</span>.<span class="built_in">format</span>(self.name,self.age,self.__count)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 类方法</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_cnt</span>(<span class="params">cls</span>):</span><br><span class="line">        <span class="keyword">return</span> cls.__count</span><br><span class="line">        </span><br><span class="line">dog=Animal(<span class="string">&#x27;汪汪&#x27;</span>,<span class="number">2</span>)</span><br><span class="line">cat=Animal(<span class="string">&#x27;喵喵&#x27;</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(dog.get_info())</span><br><span class="line"><span class="built_in">print</span>(cat.get_info())</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">我是汪汪，今年<span class="number">2</span>岁了。总计数：<span class="number">2</span>个</span><br><span class="line">我是喵喵，今年<span class="number">3</span>岁了。总计数：<span class="number">2</span>个</span><br></pre></td></tr></table></figure>
+
+<h3 id="类方法-1"><a href="#类方法-1" class="headerlink" title="类方法"></a>类方法</h3><p>类方法不能直接操作实例属性，必须通过类实例才能操作。</p>
+<p>类方法<code>推荐</code>使用<code>类名直接调用</code>，当然也可以使用<code>实例对象调用</code>（不推荐）。</p>
+<p>如<code>Animal.get_cnt</code>可以调用，使用<code>dog.get_cnt</code>也可以调用，但是不推荐这样使用</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dog=Animal(<span class="string">&#x27;汪汪&#x27;</span>,<span class="number">2</span>)</span><br><span class="line">cat=Animal(<span class="string">&#x27;喵喵&#x27;</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(dog.get_cnt())</span><br><span class="line"><span class="built_in">print</span>(Animal.get_cnt())</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="继承类"><a href="#继承类" class="headerlink" title="继承类"></a>继承类</h2><p>当已经创建了一个类<code>Person</code>后，还可以再细分为其他类，这些类和<code>Person</code>类相似，比如添加几个属性，修改几个方法</p>
+<p>此时，不需要重新新建一个类，可以从原来的类中派生一个新的类，原来的称为<code>父类</code>或者<code>基类/超类</code>，派生出的称为<code>子类</code>，子类继承了父类的所有数据和方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 父类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name</span>):</span><br><span class="line">        self.name=name</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;我是<span class="subst">&#123;self.name&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 子类继承父类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span>(<span class="title class_ inherited__">Animal</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;汪汪，我是<span class="subst">&#123;self.name&#125;</span>&#x27;</span>)</span><br><span class="line">        </span><br></pre></td></tr></table></figure>
+
+<p>Dog 类是从 Animal 类继承而来的，Dog 类自动获得了 Animal 类的所有数据和方法，而且还可以对从父类继承来的方法进行修改，调用的方式是一样的</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">animal = Animal(<span class="string">&#x27;animal&#x27;</span>)</span><br><span class="line">animal.greet()</span><br><span class="line">dog = Dog(<span class="string">&#x27;dog&#x27;</span>)</span><br><span class="line">dog.greet()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">我是animal</span><br><span class="line">汪汪，我是dog</span><br></pre></td></tr></table></figure>
+
+<h3 id="子类添加方法"><a href="#子类添加方法" class="headerlink" title="子类添加方法"></a>子类添加方法</h3><p>给子类<code>Dog</code>添加一个<code>run</code>的方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 子类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span>(<span class="title class_ inherited__">Animal</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> (<span class="string">f&#x27;汪汪，我是<span class="subst">&#123;self.name&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 跑的方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">run</span>(<span class="params">self</span>):</span><br><span class="line">    	<span class="keyword">return</span> (<span class="string">&#x27;撒丫子&#x27;</span>)</span><br><span class="line"></span><br><span class="line">dog=Dog(<span class="string">&#x27;dog&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(dog.greet()+<span class="string">&#x27;，我在&#x27;</span>+dog.run())</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">汪汪，我是dog，我在撒丫子</span><br></pre></td></tr></table></figure>
+
+<h3 id="super-函数"><a href="#super-函数" class="headerlink" title="super()函数"></a>super()函数</h3><p><code>super()</code> 函数是用于调用父类的一个方法</p>
+<p>是用来解决多重继承问题的，直接用类名调用父类方法在使用单继承的时候没问题，但是如果使用多继承，会涉及到MRO【方法解析顺序(Method Resolution Order)】、重复调用（钻石继承）等种种问题</p>
+<h4 id="语法-Python2"><a href="#语法-Python2" class="headerlink" title="语法[Python2]"></a>语法<del>[Python2]</del></h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">super</span>(<span class="keyword">class</span>[,self]).method(param1...)</span><br><span class="line"><span class="built_in">super</span>(<span class="keyword">class</span>[,self]).__init__(param1...)</span><br></pre></td></tr></table></figure>
+
+<p>此处的<code>class</code>为当前的<code>子类名</code>，如<code>class Person</code>中，子类<code>class Student(Person)</code>，<code>super</code>语句为<code>super(Student,self).__init__(name,age)...</code></p>
+<h4 id="语法-Python3"><a href="#语法-Python3" class="headerlink" title="语法[Python3]"></a>语法<del>[Python3]</del></h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">super</span>().method(param1...)</span><br><span class="line"><span class="built_in">super</span>().__init__(param1...)</span><br></pre></td></tr></table></figure>
+
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p>继承父类的属性和方法，使用<code>spuer</code>方法，新增的属性单独添加</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 父类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, age</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;我是<span class="subst">&#123;self.name&#125;</span>，我<span class="subst">&#123;self.age&#125;</span>了&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 子类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Teacher</span>(<span class="title class_ inherited__">Person</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,age,score</span>):</span><br><span class="line">        <span class="comment"># 继承父类的属性，使用super继承name,age</span></span><br><span class="line">        <span class="built_in">super</span>(Teacher,self).__init__(name,age) <span class="comment"># super(Teacher,self).__init__(name,age)</span></span><br><span class="line">        <span class="comment"># 新增的属性单独添加</span></span><br><span class="line">        self.score=score</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># 继承父类的方法，输出内容为父类的print内容</span></span><br><span class="line">        <span class="built_in">super</span>(Teacher,self).greet() <span class="comment"># super(Teacher,self).greet()</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;我是<span class="subst">&#123;self.name&#125;</span>，我<span class="subst">&#123;self.age&#125;</span>了，综合评分<span class="subst">&#123;self.score&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line">t=Teacher(<span class="string">&#x27;张三&#x27;</span>,<span class="number">29</span>,<span class="number">87.5</span>)</span><br><span class="line">t.greet()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">我是张三，我<span class="number">29</span>了</span><br><span class="line">我是张三，我<span class="number">29</span>了，综合评分<span class="number">87.5</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Parent</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.parent = <span class="string">&#x27;我是父类&#x27;</span></span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;Parent&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">info</span>(<span class="params">self,message</span>):</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&quot;%s 来自父类&quot;</span> % message)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Child</span>(<span class="title class_ inherited__">Parent</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># super(Child,self)首先找到Child的父类Parent，然后把类Child的对象转换为类Parent的对象</span></span><br><span class="line">        <span class="built_in">super</span>(Child,self).__init__()</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;子类&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">info</span>(<span class="params">self,message</span>):</span><br><span class="line">        <span class="built_in">super</span>(Child, self).info(message)</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;子类的 info 方法&#x27;</span>)</span><br><span class="line">        <span class="built_in">print</span> (self.parent)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 主函数</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    child = Child()</span><br><span class="line">    child.info(<span class="string">&#x27;Hello World&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Parent</span><br><span class="line">子类</span><br><span class="line">Hello World 来自父类</span><br><span class="line">子类的 info 方法</span><br><span class="line">我是父类</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="isinstance-函数类型判断"><a href="#isinstance-函数类型判断" class="headerlink" title="isinstance()函数类型判断"></a>isinstance()函数类型判断</h2><p>通过<code>isinstance()</code>函数可以判断一个变量的类型</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">isinstance</span>(<span class="built_in">type</span>,<span class="keyword">class</span>)<span class="comment"># 判断type是不是class类型</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><h4 id="定义类"><a href="#定义类" class="headerlink" title="定义类"></a>定义类</h4><p>现有父类<code>Person(name,gender)</code>，子类<code>Student(name,gender,score)</code>、<code>Teacher(name,gender,course)</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, gender</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.gender = gender</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>(<span class="title class_ inherited__">Person</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, gender, score</span>):</span><br><span class="line">        <span class="built_in">super</span>(Student, self).__init__(name, gender)</span><br><span class="line">        self.score = score</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Teacher</span>(<span class="title class_ inherited__">Person</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, gender, course</span>):</span><br><span class="line">        <span class="built_in">super</span>(Teacher, self).__init__(name, gender)</span><br><span class="line">        self.course = course</span><br></pre></td></tr></table></figure>
+
+<h4 id="实例化对象"><a href="#实例化对象" class="headerlink" title="实例化对象"></a>实例化对象</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">p = Person(<span class="string">&#x27;Tim&#x27;</span>, <span class="string">&#x27;Male&#x27;</span>)</span><br><span class="line">s = Student(<span class="string">&#x27;Bob&#x27;</span>, <span class="string">&#x27;Male&#x27;</span>, <span class="number">88</span>)</span><br><span class="line">t = Teacher(<span class="string">&#x27;Alice&#x27;</span>, <span class="string">&#x27;Female&#x27;</span>, <span class="string">&#x27;English&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="判断父类"><a href="#判断父类" class="headerlink" title="判断父类"></a>判断父类</h4><p>判断<code>p,s,t</code>这几个变量的时候可以使用<code>isinstance()</code>判断类型</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">isinstance</span>(p,Person)	<span class="comment"># ==&gt; True</span></span><br><span class="line"><span class="built_in">isinstance</span>(p,Student)	<span class="comment"># ==&gt; False</span></span><br><span class="line"><span class="built_in">isinstance</span>(p,Teacher)	<span class="comment"># ==&gt; False</span></span><br></pre></td></tr></table></figure>
+
+<p>这说明在继承链上，一个父类的实例不能是子类类型，因为子类比父类多了一些属性和方法</p>
+<h4 id="判断子类"><a href="#判断子类" class="headerlink" title="判断子类"></a>判断子类</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">isinstance</span>(s,Person)	<span class="comment"># ==&gt; True</span></span><br><span class="line"><span class="built_in">isinstance</span>(s,Student)	<span class="comment"># ==&gt; True</span></span><br><span class="line"><span class="built_in">isinstance</span>(s,Teacher)	<span class="comment"># ==&gt; False</span></span><br></pre></td></tr></table></figure>
+
+<p>因为<code>Student</code>继承自<code>Person</code>，所以<code>s</code>也是<code>Person</code>类型</p>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p>它是指对不同类型的参数进行相同的操作，根据对象类型不同做出不同的行为，继承拿到父类的数据和方法，子类可以重新父类的方法，可以自己添加新的方法，有了继承才有多态，实现为不同数据提供一个统一的接口</p>
+<h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, gender</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.gender = gender</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">who</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;I am a Person, my name is %s&#x27;</span> % self.name</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>(<span class="title class_ inherited__">Person</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, gender, score</span>):</span><br><span class="line">        <span class="built_in">super</span>(Student, self).__init__(name, gender)</span><br><span class="line">        self.score = score</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">who</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;I am a Student, my name is %s&#x27;</span> % self.name</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Teacher</span>(<span class="title class_ inherited__">Person</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, gender, course</span>):</span><br><span class="line">        <span class="built_in">super</span>(Teacher, self).__init__(name, gender)</span><br><span class="line">        self.course = course</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">who</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;I am a Teacher, my name is %s&#x27;</span> % self.name</span><br><span class="line">    </span><br><span class="line">p = Person(<span class="string">&#x27;Tim&#x27;</span>, <span class="string">&#x27;Male&#x27;</span>)</span><br><span class="line">s = Student(<span class="string">&#x27;Bob&#x27;</span>, <span class="string">&#x27;Male&#x27;</span>, <span class="number">88</span>)</span><br><span class="line">t = Teacher(<span class="string">&#x27;Alice&#x27;</span>, <span class="string">&#x27;Female&#x27;</span>, <span class="string">&#x27;English&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(p.who())</span><br><span class="line"><span class="built_in">print</span>(s.who())</span><br><span class="line"><span class="built_in">print</span>(t.who())</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">I am a Person, my name <span class="keyword">is</span> Tim</span><br><span class="line">I am a Student, my name <span class="keyword">is</span> Bob</span><br><span class="line">I am a Teacher, my name <span class="keyword">is</span> Alice</span><br></pre></td></tr></table></figure>
+
+<p>这种行为别成为多态，一般调用的时候先从子类自身查找方法，如果自身没有，再按照继承链向上找</p>
+<h2 id="多重继承"><a href="#多重继承" class="headerlink" title="多重继承"></a>多重继承</h2><p>多种继承主要在出现组合情况的时候使用，如果没有多重继承，那么使用组合情况可能需要更多的子类</p>
+<p>例如python的网络服务器有：<code>TCPServer</code>、<code>UDPServer</code>、<code>UnixStreamServer</code>、<code>UnixDatagramServer</code></p>
+<p>服务器运行模式有：<code>多线程ThreadingMixin</code>和<code>多进程ForkingMixin</code></p>
+<p>要创建<code>多线程</code>的<code>TCPServer</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyServer</span>(TCPServer,ThreadingMixin)</span><br></pre></td></tr></table></figure>
+
+<p>要创建<code>多进程</code>的<code>UPDServer</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyServer</span>(UPDServer,ForkingMixin)</span><br></pre></td></tr></table></figure>
+
+<h3 id="实例-3"><a href="#实例-3" class="headerlink" title="实例"></a>实例</h3><p>已知类Student、Teacher继承Person类，技能类BasketballMixin、FootballMixin继承SkillMixin类，请通过多重继承，分别定义“会打篮球的学生”和“会踢足球的老师”</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding=utf-8 -*-</span></span><br><span class="line"><span class="comment"># 人员</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Person&quot;</span>)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>(<span class="title class_ inherited__">Person</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(Student,self).__init__()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Student&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Teacher</span>(<span class="title class_ inherited__">Person</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(Teacher,self).__init__()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Teacher&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 技能</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SkillMixin</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;SkillMixin&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BasketballMixin</span>(<span class="title class_ inherited__">SkillMixin</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(BasketballMixin,self).__init__()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;BasketballMixin&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">FootballMixin</span>(<span class="title class_ inherited__">SkillMixin</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(FootballMixin,self).__init__()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;FootballMixin&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 会打篮球的学生</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BasketballStudent</span>(BasketballMixin,Student):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(BasketballStudent,self).__init__()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;会打篮球的学生&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 会踢足球的老师</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">FootballTeacher</span>(FootballMixin,Teacher):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(FootballTeacher,self).__init__()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;会踢足球的老师&#x27;</span>)</span><br><span class="line"></span><br><span class="line">s=BasketballStudent()</span><br><span class="line">t=FootballTeacher()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">SkillMixin</span><br><span class="line">BasketballMixin</span><br><span class="line">会打篮球的学生</span><br><span class="line">SkillMixin</span><br><span class="line">FootballMixin</span><br><span class="line">会踢足球的老师</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="获取对象信息"><a href="#获取对象信息" class="headerlink" title="获取对象信息"></a>获取对象信息</h2><p>前文中，可以通过<code>isinstance()</code>方法来判断是否是某个类型，现在需要获取更多的信息</p>
+<h3 id="获取类型type"><a href="#获取类型type" class="headerlink" title="获取类型type()"></a>获取类型type()</h3><p>通过<code>type()</code>方法可以获取变量的类型</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, gender</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.gender = gender</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>(<span class="title class_ inherited__">Person</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, gender, score</span>):</span><br><span class="line">        <span class="built_in">super</span>(Student, self).__init__(name, gender)</span><br><span class="line">        self.score = score</span><br><span class="line"></span><br><span class="line">p = Person(<span class="string">&#x27;Alice&#x27;</span>, <span class="string">&#x27;Female&#x27;</span>)</span><br><span class="line">s = Student(<span class="string">&#x27;Bob&#x27;</span>, <span class="string">&#x27;Male&#x27;</span>, <span class="number">100</span>)</span><br><span class="line"><span class="built_in">type</span>(p) <span class="comment"># ==&gt; &lt;class &#x27;__main__.Person&#x27;&gt;</span></span><br><span class="line"><span class="built_in">type</span>(s) <span class="comment"># ==&gt; &lt;class &#x27;__main__.Student&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&lt;<span class="keyword">class</span> <span class="string">&#x27;__main__.Person&#x27;</span>&gt;</span><br><span class="line">&lt;<span class="keyword">class</span> <span class="string">&#x27;__main__.Student&#x27;</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取属性dir"><a href="#获取属性dir" class="headerlink" title="获取属性dir()"></a>获取属性dir()</h3><p>通过<code>dir()</code>方法可以获取变量的所有属性</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span>(p)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;__class__&#x27;</span>, <span class="string">&#x27;__delattr__&#x27;</span>, <span class="string">&#x27;__dict__&#x27;</span>, <span class="string">&#x27;__dir__&#x27;</span>, <span class="string">&#x27;__doc__&#x27;</span>, <span class="string">&#x27;__eq__&#x27;</span>, <span class="string">&#x27;__format__&#x27;</span>, <span class="string">&#x27;__ge__&#x27;</span>, <span class="string">&#x27;__getattribute__&#x27;</span>, <span class="string">&#x27;__gt__&#x27;</span>, <span class="string">&#x27;__hash__&#x27;</span>, <span class="string">&#x27;__init__&#x27;</span>, <span class="string">&#x27;__init_subclass__&#x27;</span>, <span class="string">&#x27;__le__&#x27;</span>, <span class="string">&#x27;__lt__&#x27;</span>, <span class="string">&#x27;__module__&#x27;</span>, <span class="string">&#x27;__ne__&#x27;</span>, <span class="string">&#x27;__new__&#x27;</span>, <span class="string">&#x27;__reduce__&#x27;</span>, <span class="string">&#x27;__reduce_ex__&#x27;</span>, <span class="string">&#x27;__repr__&#x27;</span>, <span class="string">&#x27;__setattr__&#x27;</span>, <span class="string">&#x27;__sizeof__&#x27;</span>, <span class="string">&#x27;__str__&#x27;</span>, <span class="string">&#x27;__subclasshook__&#x27;</span>, <span class="string">&#x27;__weakref__&#x27;</span>, <span class="string">&#x27;gender&#x27;</span>, <span class="string">&#x27;name&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p><code>dir()</code>返回的属性是<code>字符串列表</code>，其中<code>__xxx__</code>为特殊属性和方法，可以直接访问</p>
+<p>如果其中存在<code>私有属性</code>，如：初始化属性中的<code>gender</code>改为<code>self.__gender=gender</code>，则输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;_Person__gender&#x27;</span>, <span class="string">&#x27;__class__&#x27;</span>, <span class="string">&#x27;__delattr__&#x27;</span>, <span class="string">&#x27;__dict__&#x27;</span>, <span class="string">&#x27;__dir__&#x27;</span>, <span class="string">&#x27;__doc__&#x27;</span>, <span class="string">&#x27;__eq__&#x27;</span>, <span class="string">&#x27;__format__&#x27;</span>, <span class="string">&#x27;__ge__&#x27;</span>, <span class="string">&#x27;__getattribute__&#x27;</span>, <span class="string">&#x27;__gt__&#x27;</span>, </span><br><span class="line"><span class="string">&#x27;__hash__&#x27;</span>, <span class="string">&#x27;__init__&#x27;</span>, <span class="string">&#x27;__init_subclass__&#x27;</span>, <span class="string">&#x27;__le__&#x27;</span>, <span class="string">&#x27;__lt__&#x27;</span>, <span class="string">&#x27;__module__&#x27;</span>, <span class="string">&#x27;__ne__&#x27;</span>, <span class="string">&#x27;__new__&#x27;</span>, <span class="string">&#x27;__reduce__&#x27;</span>, <span class="string">&#x27;__reduce_ex__&#x27;</span>, <span class="string">&#x27;__repr__&#x27;</span>, <span class="string">&#x27;__setattr__&#x27;</span>, <span class="string">&#x27;__sizeof__&#x27;</span>, <span class="string">&#x27;__str__&#x27;</span>, <span class="string">&#x27;__subclasshook__&#x27;</span>, <span class="string">&#x27;__weakref__&#x27;</span>, <span class="string">&#x27;name&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取设置对象属性"><a href="#获取设置对象属性" class="headerlink" title="获取设置对象属性"></a>获取设置对象属性</h3><p><code>dir()</code>返回的属性是<code>字符串列表</code>，如果已知一个属性名称，要获取或者设置对象的属性，就需要用 <code>getattr() </code>和<code> setattr()</code>函数</p>
+<p>如上例中的：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">p = Person(<span class="string">&#x27;Alice&#x27;</span>, <span class="string">&#x27;Female&#x27;</span>)</span><br><span class="line">s = Student(<span class="string">&#x27;Bob&#x27;</span>, <span class="string">&#x27;Male&#x27;</span>, <span class="number">100</span>)</span><br></pre></td></tr></table></figure>
+
+<p>获取<code>p</code>的<code>name</code>属性</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">getattr</span>(p,<span class="string">&#x27;name&#x27;</span>)				<span class="comment"># ==&gt; &#x27;Alice&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果有私有属性，需要强制访问，方式为<code>_类名__属性名</code>（详情见：<a href="#%E5%BC%BA%E5%88%B6%E8%AE%BF%E9%97%AE%E7%A7%81%E6%9C%89%E5%B1%9E%E6%80%A7">强制访问私有属性</a>）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">getattr</span>(p,<span class="string">&#x27;_Person__gender&#x27;</span>)	<span class="comment"># ==&gt; &#x27;Female&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果获取的属性不存在，则会报错</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">getattr</span>(p,<span class="string">&#x27;age&#x27;</span>)	<span class="comment"># ==&gt; AttributeError: &#x27;Person&#x27; object has no attribute &#x27;age&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果获取的属性不存在，指定默认返回值</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">getattr</span>(p,<span class="string">&#x27;age&#x27;</span>,<span class="number">20</span>)				<span class="comment"># ==&gt; &#x27;Female&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>设置属性值</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">setattr</span>(p,<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;Mike&#x27;</span>)		<span class="comment"># &#x27;Alice&#x27; ==&gt; &#x27;Mike&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a><span id="可变参数">可变参数</span></h3><p>可以用<code>setattr()</code>方法来设置属性值，可变参数，可以用来添加任意关键字参数，以<code>键值对</code>的方式设置值</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, gender, **agrv</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.gender = gender</span><br><span class="line">        <span class="keyword">for</span> k,v <span class="keyword">in</span> agrv.items():</span><br><span class="line">            <span class="built_in">setattr</span>(self,k,v)</span><br><span class="line">            </span><br><span class="line">p = Person(<span class="string">&#x27;Bob&#x27;</span>, <span class="string">&#x27;Male&#x27;</span>, age=<span class="number">18</span>, course=<span class="string">&#x27;Python&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(p.age)</span><br><span class="line"><span class="built_in">print</span>(p.course)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">18</span></span><br><span class="line">Python</span><br></pre></td></tr></table></figure>
+
+<p>如果不使用<code>setattr()</code>方式来添加参数，可以使用<code>for循环遍历</code>，例如设计一个求平均数的函数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">average</span>(<span class="params">*agrv</span>):</span><br><span class="line">    <span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(agrv) == <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="built_in">sum</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> agrv:</span><br><span class="line">        <span class="built_in">sum</span> += i</span><br><span class="line">    avg = <span class="built_in">sum</span> / <span class="built_in">len</span>(agrv)</span><br><span class="line">    <span class="built_in">print</span>(avg)</span><br><span class="line"></span><br><span class="line">average(<span class="number">1</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">24</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">9.0</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="类的特殊方法"><a href="#类的特殊方法" class="headerlink" title="类的特殊方法"></a>类的特殊方法</h2><h3 id="str-方法"><a href="#str-方法" class="headerlink" title="__str__()方法"></a>__str__()方法</h3><p>通常变量可以通过<code>str()</code>函数转换为字符串类型输出，但是自定义的类无法转换成字符串</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="comment"># 初始化方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.name = <span class="string">&#x27;张三&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 自定义方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;你好，我是&#x27;</span>+self.name)</span><br><span class="line"></span><br><span class="line">p1=Person()</span><br><span class="line">p1.greet()</span><br><span class="line"><span class="built_in">str</span>(p1)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">你好，我是张三</span><br><span class="line"><span class="string">&#x27;&lt;__main__.Person object at 0x00000257907AD760&gt;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>输出发现<code>str()</code>返回的是这个实例的地址，这是因为使用的是对象的内建方法<code>__str__</code>返回的</p>
+<p>如果自定义的类也实现<code>__str__()</code>方法，便可以转换为字符串输出</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="comment"># 初始化方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.name = <span class="string">&#x27;张三&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 自定义方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;你好，我是&#x27;</span>+self.name)</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;你好，我是&#x27;</span>+self.name	<span class="comment"># return str(self.name)</span></span><br><span class="line"></span><br><span class="line">p1=Person()</span><br><span class="line">p1.greet()</span><br><span class="line"><span class="built_in">str</span>(p1)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">你好，我是张三</span><br><span class="line"><span class="string">&#x27;你好，我是张三&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>此时发现，如果只输入<code>p1</code>，显示的仍然是地址</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&lt;__main__.Person <span class="built_in">object</span> at <span class="number">0x00000257907A4E50</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="repr-方法"><a href="#repr-方法" class="headerlink" title="__repr__()方法"></a>__repr__()方法</h3><p>上述情况是因为Python定义了<code>__str__()</code>和<code>__repr__()</code>两种方法，<code>__str__()</code>显示给用户，而<code>__repr__()</code>显示给开发人员，当使用<code>str()</code>时候，实际调用的是<code>__str__()</code>方法，而直接输入变量，调用的是<code>__repr__()</code>方法，所以需要再实现<code>__repr__()</code>方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="comment"># 初始化方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.name = <span class="string">&#x27;张三&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 自定义方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;你好，我是&#x27;</span>+self.name)</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;你好，我是&#x27;</span>+self.name</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__repr__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;你好，我是&#x27;</span>+self.name</span><br><span class="line"></span><br><span class="line">p1=Person()</span><br><span class="line">p1.greet()</span><br><span class="line"><span class="built_in">str</span>(p1)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">你好，我是张三</span><br><span class="line"><span class="string">&#x27;你好，我是张三&#x27;</span></span><br><span class="line">你好，我是张三</span><br></pre></td></tr></table></figure>
+
+<h3 id="len-方法"><a href="#len-方法" class="headerlink" title="__len__()方法"></a>__len__()方法</h3><p>对于列表List和元组Tuple，都可以使用内建方法len()来获取元素个数，如果需要达到这个效果，就需要实现<code>__len__()</code>方法</p>
+<p>例如有个班级Class类，初始化把学生列表传进去，通过len()函数可以返回学生个数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Class</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,students</span>):</span><br><span class="line">        self.students=students</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__len__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(self.students)</span><br><span class="line"></span><br><span class="line">stu=[<span class="string">&#x27;Mike&#x27;</span>,<span class="string">&#x27;James&#x27;</span>,<span class="string">&#x27;Alice&#x27;</span>]</span><br><span class="line">cls=Class(stu)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;此班级有 <span class="subst">&#123;<span class="built_in">len</span>(cls)&#125;</span> 名学生&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">此班级有 <span class="number">3</span> 名学生</span><br></pre></td></tr></table></figure>
+
+<h4 id="实例-4"><a href="#实例-4" class="headerlink" title="实例"></a>实例</h4><p>实现一个斐波那契数列：0,1,1,2,3,5,8…，创建一个<code>Fib</code>类，<code>Fib(10)</code>表示数列前十个元素，<code>print(Fib(10))</code>可以打印输出，<code>len(Fib(10))</code>可以返回数列个数10</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Fib</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,num</span>):</span><br><span class="line">        self.res=[]</span><br><span class="line">        self.num=num</span><br><span class="line">        a,b=<span class="number">0</span>,<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(num):</span><br><span class="line">            self.res.append(a)</span><br><span class="line">            a,b=b,a+b</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">str</span>(self.res)</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__len__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(self.res)</span><br><span class="line">        </span><br><span class="line">f=Fib(<span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(f)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>(f))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(f))</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">13</span>, <span class="number">21</span>, <span class="number">34</span>]</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">13</span>, <span class="number">21</span>, <span class="number">34</span>]</span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="slots-方法"><a href="#slots-方法" class="headerlink" title="__slots__()方法"></a>__slots__()方法</h3><p>用来限制可添加的属性，如此时有一个<code>Student</code>类，包含<code>name,gender,score</code>这几个属性</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,gender,score</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.gender = gender</span><br><span class="line">        self.score = score</span><br></pre></td></tr></table></figure>
+
+<p>类中的参数都可以动态的添加，如此时再添加一个<code>age</code>属性</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s=Student(<span class="string">&#x27;Mike&#x27;</span>,<span class="string">&#x27;Male&#x27;</span>,<span class="number">87</span>)</span><br><span class="line">s.age=<span class="number">25</span>	<span class="comment"># 动态添加属性age</span></span><br></pre></td></tr></table></figure>
+
+<p>如果不做限制，会有很多属性，不便于后期管理，所以需要使用<code>__slots__()</code>方法来限制添加的属性</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>:</span><br><span class="line">    __slots__ = (<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;gender&#x27;</span>, <span class="string">&#x27;score&#x27;</span>,<span class="string">&#x27;total&#x27;</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,gender,score</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.gender = gender</span><br><span class="line">        self.score = score</span><br></pre></td></tr></table></figure>
+
+<p>此时执行动态添加属性<code>age</code>的语句，会报错，如果添加<code>total</code>则不会报错</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">AttributeError: <span class="string">&#x27;Student&#x27;</span> <span class="built_in">object</span> has no attribute <span class="string">&#x27;age&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>假设Person类通过<code>__slots__</code>定义了<code>name</code>和<code>gender</code>，请在派生类<code>Student</code>中通过<code>__slots__</code>继续添加<code>score</code>的定义，使<code>Student</code>类可以实现<code>name</code>、<code>gender</code>和<code>score</code>3个属性。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    __slots__=[<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;gender&#x27;</span>]</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,gender</span>):</span><br><span class="line">        self.name=name</span><br><span class="line">        self.gender=gender</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>(<span class="title class_ inherited__">Person</span>):</span><br><span class="line">    __slots__=[<span class="string">&#x27;score&#x27;</span>]</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,gender,score</span>):</span><br><span class="line">        <span class="built_in">super</span>(Student,self).__init__(name,gender)</span><br><span class="line">        self.score=score</span><br><span class="line"></span><br><span class="line">s=Student(<span class="string">&#x27;Alice&#x27;</span>,<span class="string">&#x27;Female&#x27;</span>,<span class="number">96</span>)</span><br><span class="line">s.name=<span class="string">&#x27;Bob&#x27;</span></span><br><span class="line">s.score=<span class="number">87</span></span><br><span class="line"><span class="built_in">print</span>(s.score)</span><br></pre></td></tr></table></figure>
+
+<h3 id="call-方法"><a href="#call-方法" class="headerlink" title="__call__()方法"></a>__call__()方法</h3><p>Python中，函数是一个对象，可以将一个函数赋值给一个变量，且不改变函数的功能</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>f=<span class="built_in">abs</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f</span><br><span class="line">&lt;built-<span class="keyword">in</span> function <span class="built_in">abs</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f.__name__</span><br><span class="line"><span class="string">&#x27;abs&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f(-<span class="number">123</span>)</span><br><span class="line"><span class="number">123</span></span><br></pre></td></tr></table></figure>
+
+<p>此时，<code>f</code>被称为<code>可调用的对象</code>，其实所有的函数都是<code>可调用对象</code></p>
+<p>如果把一个类实例也变成一个可调用对象(函数)，需要实现一个<code>__call__()</code>方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,age</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__call__</span>(<span class="params">self,friend</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;My name is &#123;&#125;.&#x27;</span>.<span class="built_in">format</span>(self.name))</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;My friend is &#123;&#125;.&#x27;</span>.<span class="built_in">format</span>(friend))</span><br><span class="line">      </span><br><span class="line">p=Person(<span class="string">&#x27;Bob&#x27;</span>,<span class="number">25</span>)</span><br><span class="line">p(<span class="string">&#x27;Mike&#x27;</span>)		<span class="comment"># ==&gt; 用函数的方式调用Person类的实例p</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">My name <span class="keyword">is</span> Bob.</span><br><span class="line">My friend <span class="keyword">is</span> Mike.</span><br></pre></td></tr></table></figure>
+
+<h4 id="实例-5"><a href="#实例-5" class="headerlink" title="实例"></a>实例</h4><p>对前面的斐波那契数列类<code>Fib</code>，加入<code>__call__</code>方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Fib</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.res=[]</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__call__</span>(<span class="params">self,num</span>):</span><br><span class="line">        self.num=num</span><br><span class="line">        a,b=<span class="number">0</span>,<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(num):</span><br><span class="line">            self.res.append(a)</span><br><span class="line">            a,b=b,a+b</span><br><span class="line">        <span class="keyword">return</span> self.res</span><br><span class="line">f=Fib()</span><br><span class="line"><span class="built_in">print</span>(f(<span class="number">10</span>))	<span class="comment"># 可以像函数一样调用</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">13</span>, <span class="number">21</span>, <span class="number">34</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="模块和包"><a href="#模块和包" class="headerlink" title="模块和包"></a>模块和包</h2><p>为了便于管理自定义的内容，可以将模块根据特定规则划分到包中</p>
+<p>导入格式：<code>from 包 import 模块</code></p>
+<p>包必须包含<code>__init__.py</code>文件，模块文件没有<code>__init__.py</code>文件</p>
+<h3 id="自定义模块"><a href="#自定义模块" class="headerlink" title="自定义模块"></a>自定义模块</h3><p>定义一个叫<code>tools</code>的模块，模块名：<code>tools.py</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tools.py</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">say_hello</span>(<span class="params">name</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;你好啊&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(name))</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">say_goodbye</span>(<span class="params">name</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;拜拜&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(name))</span><br></pre></td></tr></table></figure>
+
+<h3 id="格式-1"><a href="#格式-1" class="headerlink" title="格式"></a>格式</h3><p><code>import 模块名1 [as 别名1], 模块名2 [as 别名2]，…</code></p>
+<p><code>from 模块名 import 成员名1 [as 别名1]，成员名2 [as 别名2]，…</code></p>
+<h3 id="导入模块"><a href="#导入模块" class="headerlink" title="导入模块"></a>导入模块</h3><p>导入官方模块不需要考虑路径问题，导入自定义模块需要考虑路径（详情见：<a href="#%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%97%E7%9A%84%E8%B7%AF%E5%BE%84">导入模块的路径</a>)</p>
+<p>导入整个模块</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> MODULE</span><br></pre></td></tr></table></figure>
+
+<p>导入模块的部分属性或函数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PACKAGE <span class="keyword">import</span> MODULE</span><br></pre></td></tr></table></figure>
+
+<p>导入模块中的所有内容</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PACKAGE <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure>
+
+<p>为了防止导入的函数与本文件的函数冲突，有两种方法解决：</p>
+<ol>
+<li>直接导入模块，不指定具体内容</li>
+<li>使用<code>from PACKAGE import MODULE as NAME</code>把导入的内容进行重命名</li>
+</ol>
+<p>如使用两种方法导入<code>math</code>模块的<code>sin(),cos()</code>函数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 从模块导入所有类</span></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sin,cos,pi</span><br><span class="line">sin(pi/<span class="number">2</span>)</span><br><span class="line">cos(pi/<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入整个模块</span></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line">math.sin(pi/<span class="number">2</span>)</span><br><span class="line">math.cos(pi/<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用别名</span></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sin <span class="keyword">as</span> s,pi</span><br><span class="line">s(pi/<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="导入模块的路径"><a href="#导入模块的路径" class="headerlink" title="导入模块的路径"></a><span id="导入模块的路径">导入模块的路径</span></h3><p>使用<code>sys</code>模块中的<code>path</code>变量，可以得到一个路径列表，导入模块的时候会搜索这个路径列表，如果想要添加路径，可以给<code>sys.path</code>赋值</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys					<span class="comment"># 或from sys import path</span></span><br><span class="line">sys.path.append(<span class="string">&#x27;../&#x27;</span>)		<span class="comment">#   path.append(&#x27;../&#x27;)</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>公告</title>
+    <url>/blog/posts/31495/</url>
+    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><div class="note orange icon-padding flat"><i class="note-icon fas fa-magic"></i><p>后续即将添加新功能……</p>
+<ol>
+<li>照片墙添加内容</li>
+<li>电影电视</li>
+<li>嵌入应用</li>
+<li>一言时间轴</li>
+<li>导入博客</li>
+<li>软件资源</li>
+<li>添加侧边栏</li>
+</ol>
+</div>
+
+
+
+<h1 id="照片墙"><a href="#照片墙" class="headerlink" title="照片墙"></a>照片墙</h1><p>整理爬取照片网图数据，上传github</p>
+<div class="note warning flat"><p>直接上传仓库，或者使用图片专用仓库</p>
+</div>
+
+
+
+<h1 id="电影电视"><a href="#电影电视" class="headerlink" title="电影电视"></a>电影电视</h1><p>JerryC的友链里面，有个用户的电影内容，采用了hexo-douban插件，可以实现跳转豆瓣网页内容，分类<code>已看</code>、<code>未看</code>、<code>在看</code>等类型，分为电影、电视剧、动漫等</p>
+<h1 id="嵌入应用"><a href="#嵌入应用" class="headerlink" title="嵌入应用"></a>嵌入应用</h1><p>将一些开发的应用，或者其他源码应用添加进来，使用iframe框架</p>
+<h1 id="一言时间轴"><a href="#一言时间轴" class="headerlink" title="一言时间轴"></a>一言时间轴</h1><p>通过时间轴组件，将一些文案、一言语录添加进来，部分其他视频平台的链接通过直链方式跳转</p>
+<h1 id="导入博客"><a href="#导入博客" class="headerlink" title="导入博客"></a>导入博客</h1><p>各平台已经发布的文章重新导入到博客中，目前涉及平台：博客园，CSDN，华为开发者中心，</p>
+<h1 id="软件资源"><a href="#软件资源" class="headerlink" title="软件资源"></a>软件资源</h1><p>使用蓝奏云、阿里云盘等低限速盘或不限速盘分享软件资源。</p>
+<h1 id="添加侧边栏"><a href="#添加侧边栏" class="headerlink" title="添加侧边栏"></a>添加侧边栏</h1><p>添加侧边栏功能，加入一些常用功能的快速链接跳转，如固定文章等内容</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>demo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue-cli脚手架创建vue3项目</title>
+    <url>/blog/posts/38573/</url>
+    <content><![CDATA[<p><font size=5 color=#f33b45><strong>Vue-cli脚手架创建vue3项目</strong></font></p>
+<p><font size=4 color=#3399ea><strong>原创：丶无殇&emsp;&emsp;2023-02-07</strong></font></p>
+<hr>
+<p>如果需要使用vite可以跳转<a href="#vite_255">文章末尾</a></p>
+<hr>
+<h1 id="Vue-cli脚手架创建vue3项目"><a href="#Vue-cli脚手架创建vue3项目" class="headerlink" title="Vue-cli脚手架创建vue3项目"></a>Vue-cli脚手架创建vue3项目</h1><h2 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a>安装vue-cli脚手架</h2><p>执行：<code>npm install -g @vue/cli</code></p>
+<p>脚手架安装具体内容不在此赘述</p>
+<hr>
+<h2 id="创建项目（默认配置）"><a href="#创建项目（默认配置）" class="headerlink" title="创建项目（默认配置）"></a>创建项目（默认配置）</h2><p>执行<code>vue create &#123;filename&#125;</code></p>
+<p><code>&#123;filename&#125;</code>整个替换为你的项目名称，一定要<code>全部小写</code>，否则会报错：</p>
+<blockquote>
+<p>Warning: name can no longer contain capital letters</p>
+</blockquote>
+<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>输入：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">vue create test01</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">Vue <span class="built_in">CLI</span> v5.<span class="number">0.8</span></span><br><span class="line"></span><br><span class="line">? Please pick a preset:</span><br><span class="line">&gt; Default ([<span class="type">Vue</span> <span class="number">3</span>] babel, eslint) </span><br><span class="line">  Default ([<span class="type">Vue</span> <span class="number">2</span>] babel, eslint) </span><br><span class="line">  Manually <span class="built_in">select</span> features</span><br></pre></td></tr></table></figure>
+
+<p>使用<kbd>↑</kbd><kbd>↓</kbd>按键操作，<code>&gt;</code>指向的为选中的</p>
+<p>然后输入：回车</p>
+<p>输出：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">Vue <span class="built_in">CLI</span> v5.<span class="number">0.8</span></span><br><span class="line">✨  Creating project <span class="keyword">in</span> ██████████████████████████████\test01.</span><br><span class="line">⚙️  Installing <span class="built_in">CLI</span> plugins. This might take a <span class="keyword">while</span>...</span><br><span class="line"></span><br><span class="line">[██████<span class="type">............</span>] / idealTree:serve<span class="literal">-index</span>: sill fetch manifest unpipe<span class="selector-tag">@</span>~<span class="number">1.0</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>然后安装好之后会显示：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">added <span class="number">102</span> packages <span class="keyword">in</span> <span class="number">20</span>s</span><br><span class="line">⚓  Running completion hooks...</span><br><span class="line"></span><br><span class="line">📄  Generating README.md...</span><br><span class="line"></span><br><span class="line">🎉  Successfully created project vue3test.</span><br><span class="line">👉  Get started with the following commands:</span><br><span class="line"></span><br><span class="line"> <span class="variable">$</span> <span class="built_in">cd</span> test01</span><br><span class="line"> <span class="variable">$</span> npm run serve</span><br></pre></td></tr></table></figure>
+
+<p>至此项目创建完成，这是默认配置的创建，如果需要手动配置，可进行以下操作</p>
+<hr>
+<h2 id="创建项目（手动配置）"><a href="#创建项目（手动配置）" class="headerlink" title="创建项目（手动配置）"></a>创建项目（手动配置）</h2><p>执行<code>vue create &#123;filename&#125;</code></p>
+<p><code>&#123;filename&#125;</code>整个替换为你的项目名称，一定要<code>全部小写</code>，否则会报错：</p>
+<blockquote>
+<p>Warning: name can no longer contain capital letters</p>
+</blockquote>
+<h3 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a>创建</h3><p>输入：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">vue create test02</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">Vue <span class="built_in">CLI</span> v5.<span class="number">0.8</span></span><br><span class="line"></span><br><span class="line">? Please pick a preset:</span><br><span class="line">  Default ([<span class="type">Vue</span> <span class="number">3</span>] babel, eslint) </span><br><span class="line">  Default ([<span class="type">Vue</span> <span class="number">2</span>] babel, eslint) </span><br><span class="line">&gt; Manually <span class="built_in">select</span> features</span><br></pre></td></tr></table></figure>
+
+<p>使用<kbd>↑</kbd><kbd>↓</kbd>按键操作，<code>&gt;</code>指向的为选中的</p>
+<p>然后输入：回车</p>
+<h3 id="配置功能"><a href="#配置功能" class="headerlink" title="配置功能"></a>配置功能</h3><p>回车后会显示功能列表，可以根据项目的需求选择对应的功能：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Check the features needed <span class="keyword">for</span> your project: (Press &lt;space&gt; to <span class="built_in">select</span>, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection, and &lt;enter&gt; to proceed)</span><br><span class="line">&gt;(*) Babel</span><br><span class="line"> ( ) TypeScript</span><br><span class="line"> ( ) Progressive Web App (PWA) Support</span><br><span class="line"> ( ) Router</span><br><span class="line"> ( ) Vuex</span><br><span class="line"> ( ) CSS Pre<span class="literal">-processors</span></span><br><span class="line"> (*) Linter / Formatter</span><br><span class="line"> ( ) Unit Testing</span><br><span class="line"> ( ) E2E Testing</span><br></pre></td></tr></table></figure>
+
+<p>此时，可以通过<kbd>空格(Space)</kbd>进行选择和取消选择，<kbd>a</kbd>全选，<kbd>i</kbd>反选，<kbd>回车(Enter)</kbd>继续</p>
+<p><code>Router</code>和<code>Vuex</code>一般会用上，如果是单页应用可以不选择</p>
+<p>选择完成后回车</p>
+<h3 id="版本选择"><a href="#版本选择" class="headerlink" title="版本选择"></a>版本选择</h3><p>然后根据项目需求选择<code>Vue.js</code>的版本</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Choose a version of Vue.js that you want to <span class="built_in">start</span> the project with (Use arrow keys)</span><br><span class="line">&gt; <span class="number">3</span>.x</span><br><span class="line">  <span class="number">2</span>.x</span><br></pre></td></tr></table></figure>
+
+<p>现在大多是<code>Vue3</code>，所以选择默认的<code>3.x</code>后回车即可</p>
+<h3 id="History模式"><a href="#History模式" class="headerlink" title="History模式"></a>History模式</h3><p>此处需要选择<code>是否使用路由的历史记录模式</code>，一般选择是，也可根据项目需求来</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Use <span class="built_in">history</span> mode <span class="keyword">for</span> router? (Requires proper server setup <span class="keyword">for</span> index fallback <span class="keyword">in</span> production) (Y/n) </span><br></pre></td></tr></table></figure>
+
+<p>输入<code>Y</code>后回车</p>
+<h3 id="格式检测"><a href="#格式检测" class="headerlink" title="格式检测"></a>格式检测</h3><p>接下来的是一个代码格式检测的，一般公司会要求这个必须选择</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Pick a linter / formatter config: (Use arrow keys)</span><br><span class="line">&gt; ESLint with error prevention only</span><br><span class="line">  ESLint + Airbnb config</span><br><span class="line">  ESLint + Standard config</span><br><span class="line">  ESLint + Prettier</span><br></pre></td></tr></table></figure>
+
+<p>此处选择默认第一个即可，然后选择Lint的其他功能：</p>
+<ol>
+<li>保存时候Lint</li>
+<li>Git提交时候</li>
+</ol>
+<p>这里建议保存时候检测代码</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Pick additional lint features: (Press &lt;space&gt; to <span class="built_in">select</span>, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection, and &lt;enter&gt; to proceed)</span><br><span class="line">&gt;(*) Lint on save</span><br><span class="line"> ( ) Lint and fix on commit (requires Git)</span><br></pre></td></tr></table></figure>
+
+<p>回车后继续</p>
+<h3 id="配置方式"><a href="#配置方式" class="headerlink" title="配置方式"></a>配置方式</h3><p>选择Babel，ESLint等功能的配置方式：</p>
+<ol>
+<li>在专属配置文件里面</li>
+<li>在<code>package.json</code></li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? <span class="built_in">Where</span> <span class="keyword">do</span> you prefer placing config <span class="keyword">for</span> Babel, ESLint, etc.? (Use arrow keys)</span><br><span class="line">  <span class="keyword">In</span> dedicated config files</span><br><span class="line">&gt; <span class="keyword">In</span> package.json</span><br></pre></td></tr></table></figure>
+
+<p>这里博主使用的是<code>package.json</code>，可以选择在专属配置文件里面</p>
+<h3 id="另存预设"><a href="#另存预设" class="headerlink" title="另存预设"></a>另存预设</h3><p>以上的配置是否保存为一个预设，以后可以直接使用此配置</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Save this as a preset <span class="keyword">for</span> future projects? (y/N)</span><br></pre></td></tr></table></figure>
+
+<p>选择<code>Y</code>的话，需要设置一个名称，比如叫<code>setting01</code></p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Save preset as: setting01</span><br><span class="line"></span><br><span class="line">🎉  Preset tempset saved <span class="keyword">in</span> C:\Users\User\.vuerc</span><br></pre></td></tr></table></figure>
+
+<p>然后就开始自动安装了</p>
+<h3 id="配置总览"><a href="#配置总览" class="headerlink" title="配置总览"></a>配置总览</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">Vue <span class="built_in">CLI</span> v5.<span class="number">0.8</span></span><br><span class="line">? Please pick a preset: Manually <span class="built_in">select</span> features</span><br><span class="line">? Check the features needed <span class="keyword">for</span> your project: Babel, Router, Linter</span><br><span class="line">? Choose a version of Vue.js that you want to <span class="built_in">start</span> the project with <span class="number">3</span>.x</span><br><span class="line">? Use <span class="built_in">history</span> mode <span class="keyword">for</span> router? (Requires proper server setup <span class="keyword">for</span> index fallback <span class="keyword">in</span> production) Yes</span><br><span class="line">? Pick a linter / formatter config: Basic</span><br><span class="line">? Pick additional lint features: Lint on save</span><br><span class="line">? <span class="built_in">Where</span> <span class="keyword">do</span> you prefer placing config <span class="keyword">for</span> Babel, ESLint, etc.? <span class="keyword">In</span> package.json</span><br><span class="line">? Save this as a preset <span class="keyword">for</span> future projects? Yes</span><br><span class="line">? Save preset as: setting01</span><br><span class="line"></span><br><span class="line">🎉  Preset tempset saved <span class="keyword">in</span> C:\Users\User\.vuerc</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装完成"><a href="#安装完成" class="headerlink" title="安装完成"></a>安装完成</h3><p>安装完成后提示</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">🎉  Successfully created project vue3test1.</span><br><span class="line">👉  Get started with the following commands:</span><br><span class="line"></span><br><span class="line"> <span class="variable">$</span> <span class="built_in">cd</span> test02</span><br><span class="line"> <span class="variable">$</span> npm run serve</span><br></pre></td></tr></table></figure>
+
+<p>进入文件夹<code>cd test02</code>后就可以<code>npm run serve</code>然后查看创建的默认项目了</p>
+<hr>
+<p>如果需要使用Vite创建，可以使用下面的方法</p>
+<h1 id="Vite脚手架创建vue3项目"><a href="#Vite脚手架创建vue3项目" class="headerlink" title="Vite脚手架创建vue3项目"></a>Vite脚手架创建vue3项目</h1><h2 id="安装vite"><a href="#安装vite" class="headerlink" title="安装vite"></a>安装vite</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install vite@latest</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm init vite@latest</span><br><span class="line">//或者</span><br><span class="line">npm create vite@latest</span><br></pre></td></tr></table></figure>
+
+<p>流程如下：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; npm init vite@latest</span><br><span class="line">√ Project name: ... testvue</span><br><span class="line">√ Package name: ... testvue</span><br><span class="line">? Select a framework: » - Use arrow-keys. Return to submit.</span><br><span class="line">    Vanilla</span><br><span class="line">&gt;   Vue</span><br><span class="line">    React</span><br><span class="line">    Preact</span><br><span class="line">    Lit</span><br><span class="line">    Svelte</span><br><span class="line">    Solid</span><br><span class="line">    Qwik</span><br><span class="line">    Others</span><br><span class="line">? Select a framework: » - Use arrow-keys. Return to submit.</span><br><span class="line">    Vanilla</span><br><span class="line">&gt;   Vue</span><br><span class="line">    React</span><br><span class="line">√ Select a framework: » Vue</span><br><span class="line">√ Select a variant: » JavaScript</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客文档配置教程</title>
+    <url>/blog/posts/47472/</url>
+    <content><![CDATA[<div class="note green icon-padding flat"><i class="note-icon fas fa-rocket"></i><p> 📚  文档目录</p>
+<p><a href="/blog/posts/47472/" title="博客文档配置教程">🚀 快速开始</a></p>
+</div>
+
+<div class="note orange icon-padding flat"><i class="note-icon fas fa-magic"></i><p>你可以通过右下角的 繁 按钮切换为繁体显示 </p>
+</div>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note green &#x27;fas fa-rocket&#x27; %&#125;</span><br><span class="line"></span><br><span class="line"> 📚  文档目录</span><br><span class="line"></span><br><span class="line">&#123;% post_link 博客文档配置教程 &#x27;🚀 快速开始 &#x27; %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note orange &#x27;fas fa-magic&#x27; %&#125;</span><br><span class="line"></span><br><span class="line">你可以通过右下角的 繁 按钮切换为繁体显示 </span><br><span class="line"></span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="前置格式（Front-matter）"><a href="#前置格式（Front-matter）" class="headerlink" title="前置格式（Front-matter）"></a>前置格式（Front-matter）</h1><p>某文档的前置格式: </p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Butterfly 安装文档(二) 主题页面</span><br><span class="line">date: 2020-05-28 22:34:41</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">  -</span> 教程</span><br><span class="line"><span class="bullet">  -</span> Hexo</span><br><span class="line"><span class="bullet">  -</span> 主题</span><br><span class="line"><span class="bullet">  -</span> butterfly</span><br><span class="line">categories: </span><br><span class="line"><span class="bullet">  -</span> Docs文档</span><br><span class="line">keywords: &#x27;hexo,butterfly,主题,doc,教程,文档&#x27;</span><br><span class="line">description: Butterfly安装文档-主题页面</span><br><span class="line">cover: https://jsd.012700.xyz/gh/jerryc127/CDN/img/Butterfly-docs-02-cover.png</span><br><span class="line">abbrlink: dc584b87</span><br><span class="line"><span class="section">comments: false</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Page-页面格式"><a href="#Page-页面格式" class="headerlink" title="Page 页面格式"></a>Page 页面格式</h2><p>可以设置的<code>字段</code>格式如下: </p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>title</code></td>
+<td>【必需】页面标题</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>【必需】页面创建日期</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>【必需】标签、分类和友情链接三个页面需要配置</td>
+</tr>
+<tr>
+<td>updated</td>
+<td>【可选】页面更新日期</td>
+</tr>
+<tr>
+<td>description</td>
+<td>【可选】页面描述</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>【可选】页面关键字</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>【可选】显示页面评论模块 (默认 true)</td>
+</tr>
+<tr>
+<td>top_img</td>
+<td>【可选】页面顶部图片</td>
+</tr>
+<tr>
+<td>mathjax</td>
+<td>【可选】显示mathjax</td>
+</tr>
+<tr>
+<td>katex</td>
+<td>【可选】显示katex</td>
+</tr>
+<tr>
+<td>aside</td>
+<td>【可选】显示侧边栏 (默认 true)</td>
+</tr>
+<tr>
+<td>aplayer</td>
+<td>【可选】在需要的页面加载aplayer的js和css，参考<code>音乐</code>配置</td>
+</tr>
+<tr>
+<td>highlight_shrink</td>
+<td>【可选】配置代码框是否展开 (true&#x2F;false)</td>
+</tr>
+<tr>
+<td>random</td>
+<td>【可选】配置友情链接是否随机排序（默认为 false)</td>
+</tr>
+<tr>
+<td>sticky</td>
+<td>【可选】<code>sticky: true</code>既可实现文章置顶效果</td>
+</tr>
+</tbody></table>
+<p>常用可选字段: </p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>updated</td>
+<td>2024-6-22 17:00:16</td>
+</tr>
+<tr>
+<td>description</td>
+<td>描述的文字</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>‘hexo,butterfly,主題,关键词’</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>true</td>
+</tr>
+<tr>
+<td>top_img</td>
+<td><a href="https://yuanxiapi.cn/api/img/photo/42246923.jpg">图片地址</a></td>
+</tr>
+<tr>
+<td>aside</td>
+<td>true</td>
+</tr>
+<tr>
+<td>highlight_shrink</td>
+<td>true</td>
+</tr>
+<tr>
+<td>random</td>
+<td>false</td>
+</tr>
+<tr>
+<td>sticky</td>
+<td>false</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="Post-文章格式"><a href="#Post-文章格式" class="headerlink" title="Post 文章格式"></a>Post 文章格式</h2><p>可以设置的<code>字段</code>格式如下: （已经存在的字段就不重复显示）</p>
+<table>
+<thead>
+<tr>
+<th align="left">字段</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">tags</td>
+<td>【可选】文章标签</td>
+</tr>
+<tr>
+<td align="left">categories</td>
+<td>【可选】文章分类</td>
+</tr>
+<tr>
+<td align="left">cover</td>
+<td>【可选】文章缩略图</td>
+</tr>
+<tr>
+<td align="left">toc</td>
+<td>【可选】显示目录</td>
+</tr>
+<tr>
+<td align="left">toc_number</td>
+<td>【可选】显示目录序号</td>
+</tr>
+<tr>
+<td align="left">toc_style_simple</td>
+<td>【可选】显示目录简洁模式</td>
+</tr>
+<tr>
+<td align="left">copyright</td>
+<td>【可选】显示文章版权模块</td>
+</tr>
+<tr>
+<td align="left">copyright_author</td>
+<td>【可选】文章版权模块的<code>文章作者</code></td>
+</tr>
+<tr>
+<td align="left">copyright_author_href</td>
+<td>【可选】文章版权模块的<code>文章作者</code>连接</td>
+</tr>
+<tr>
+<td align="left">copyright_url</td>
+<td>【可选】文章版权模块的<code>文章连接</code>连接</td>
+</tr>
+<tr>
+<td align="left">copyright_info</td>
+<td>【可选】文章版权模块的<code>版权声明</code>文字</td>
+</tr>
+<tr>
+<td align="left">abcjs</td>
+<td>【可选】加载abcjs（默认false）</td>
+</tr>
+<tr>
+<td align="left"><code>abbrlink</code></td>
+<td>【可选】<code>文章路径重定向</code>【<a href="#%E5%9B%BA%E5%AE%9A%E9%93%BE%E6%8E%A5%EF%BC%88Abbrlink%EF%BC%89">Abbrlink</a>】</td>
+</tr>
+</tbody></table>
+<p>常用可选字段: </p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>tags</td>
+<td>- 教程<br/>- Hexo</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>- Docs文档<br />- 教程</td>
+</tr>
+<tr>
+<td>cover</td>
+<td><a href="https://yuanxiapi.cn/api/img/photo/42246923.jpg">图片地址</a></td>
+</tr>
+<tr>
+<td>toc</td>
+<td>true</td>
+</tr>
+<tr>
+<td>toc_number</td>
+<td>true</td>
+</tr>
+<tr>
+<td>toc_style_simple</td>
+<td>false</td>
+</tr>
+<tr>
+<td>copyright</td>
+<td>true</td>
+</tr>
+<tr>
+<td>copyright_author</td>
+<td>作者名</td>
+</tr>
+<tr>
+<td>copyright_author_href</td>
+<td>作者链接</td>
+</tr>
+<tr>
+<td>copyright_url</td>
+<td>文章链接</td>
+</tr>
+<tr>
+<td>copyright_info</td>
+<td>版权信息</td>
+</tr>
+</tbody></table>
+<h2 id="Front-matter-示例"><a href="#Front-matter-示例" class="headerlink" title="Front-matter 示例"></a>Front-matter 示例</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: 前置格式（Front-matter）</span><br><span class="line">date: 2024-6-22 19:08:11</span><br><span class="line">updated: 2024-6-22 20:51:30</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">  -</span> 帮助文档</span><br><span class="line"><span class="bullet">  -</span> Hexo</span><br><span class="line">categories: </span><br><span class="line"><span class="bullet">  -</span> 教程</span><br><span class="line">keywords: &#x27;hexo,front-matter,教程,前置&#x27;</span><br><span class="line">description: 相关Front-matter配置内容，Post书写内容格式教程</span><br><span class="line">cover: https://jsd.012700.xyz/gh/jerryc127/CDN/img/Butterfly-docs-02-cover.png</span><br><span class="line">top<span class="emphasis">_img: https://yuanxiapi.cn/api/img/photo/42246923.jpg</span></span><br><span class="line"><span class="emphasis">abbrlink: d03f5ca5</span></span><br><span class="line"><span class="emphasis">comments: false</span></span><br><span class="line"><span class="emphasis">aside: true</span></span><br><span class="line"><span class="emphasis">highlight_</span>shrink: true</span><br><span class="line">random: false</span><br><span class="line">toc: true</span><br><span class="line">toc<span class="emphasis">_number: 3</span></span><br><span class="line"><span class="emphasis">toc_</span>style<span class="emphasis">_simple: true</span></span><br><span class="line"><span class="emphasis">copyright: true</span></span><br><span class="line"><span class="emphasis">copyright_</span>author: Bencky</span><br><span class="line">copyright<span class="emphasis">_author_</span>href: https://github.com/bencky</span><br><span class="line">copyright<span class="emphasis">_url: https://www.baidu.com</span></span><br><span class="line"><span class="emphasis">copyright_</span>info: 版权文字</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用格式"><a href="#常用格式" class="headerlink" title="常用格式"></a>常用格式</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: 前置格式（Front-matter）</span><br><span class="line">date: 2024-6-22 19:08:11</span><br><span class="line">updated: 2024-6-22 20:51:30</span><br><span class="line">tags:</span><br><span class="line">  - 帮助文档</span><br><span class="line">  - Hexo</span><br><span class="line">categories: </span><br><span class="line">  - 教程</span><br><span class="line">keywords: &#x27;hexo,front-matter,教程,前置&#x27;</span><br><span class="line">description: 相关Front-matter配置内容，Post书写内容格式教程</span><br><span class="line">cover: https://yuanxiapi.cn/api/img/photo/42246923.jpg</span><br><span class="line">top_img: https://yuanxiapi.cn/api/img/photo/42246923.jpg</span><br><span class="line">abbrlink: d03f5ca5</span><br><span class="line">comments: false</span><br><span class="line">aside: true</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="右下角按钮-Bottom-right-button"><a href="#右下角按钮-Bottom-right-button" class="headerlink" title="右下角按钮 (Bottom right button)"></a>右下角按钮 (Bottom right button)</h1><p>可选项有：<code>readmode</code>,<code>translate</code>,<code>darkmode</code>,<code>hideAside</code>,<code>toc</code>,<code>chat</code>,<code>comment</code> </p>
+<h2 id="自定义顺序"><a href="#自定义顺序" class="headerlink" title="自定义顺序"></a>自定义顺序</h2><p>可以在配置文件中设置按钮顺序，以及显示和隐藏的按钮：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Don&#x27;t modify the following settings unless you know how they work (非必要请不要修改 )</span></span><br><span class="line"><span class="comment"># 选择: readmode,translate,darkmode,hideAside,toc,chat,comment</span></span><br><span class="line"><span class="comment"># 不要重复</span></span><br><span class="line"><span class="attr">rightside_item_order:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">hide:</span> <span class="string">readmode,translate,darkmode</span> <span class="comment"># readmode,translate,darkmode,hideAside</span></span><br><span class="line">  <span class="attr">show:</span> <span class="string">hideAside,toc,chat,comment</span> <span class="comment"># toc,chat,comment</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="标签外挂（Tag-Plugins）"><a href="#标签外挂（Tag-Plugins）" class="headerlink" title="标签外挂（Tag Plugins）"></a>标签外挂（Tag Plugins）</h1><h2 id="提示标签（note）"><a href="#提示标签（note）" class="headerlink" title="提示标签（note）"></a>提示标签（note）</h2><p>标签外挂使用：<code>&#123;% 标签名称 %&#125;</code>来实现外挂效果</p>
+<div class="note info flat"><p>标签外挂是Hexo独有的功能，并不是标准的Markdown格式。</p>
+</div>
+
+<p>格式如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note [class] [no-icon] [style] %&#125;</span><br><span class="line">Any content (support inline tags too.io).</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>用法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>class&#x2F;color</td>
+<td>【可选】标识，不同的标识有不同的配色<br />（ default &#x2F; primary &#x2F; success &#x2F; info &#x2F; warning &#x2F; danger ）<br />（ default &#x2F; blue &#x2F; pink &#x2F; red &#x2F; purple &#x2F; orange &#x2F; green ）</td>
+</tr>
+<tr>
+<td>no-icon&#x2F;icon</td>
+<td>【可选】不显示 icon</td>
+</tr>
+<tr>
+<td>style</td>
+<td>【可选】可以覆盖配置中的 style（simple&#x2F;modern&#x2F;flat&#x2F;disabled）</td>
+</tr>
+</tbody></table>
+<p>效果如下：</p>
+<blockquote>
+<p>默认样式效果：simple&#x2F;modern&#x2F;flat&#x2F;disabled</p>
+</blockquote>
+<div class="note success disabled"><p>success 提示块标签，<code>disabled</code>样式</p>
+</div>
+
+<div class="note success simple"><p>success 提示块标签，<code>simple</code>样式</p>
+</div>
+
+<div class="note success modern"><p>success 提示块标签，<code>modern</code>样式</p>
+</div>
+
+<div class="note success flat"><p>success 提示块标签，<code>flat</code>样式</p>
+</div>
+
+<blockquote>
+<p>自定义icon效果（<code>v3.2.0</code>以上）</p>
+</blockquote>
+<div class="note pink icon-padding disabled"><i class="note-icon fas fa-car-crash"></i><p>小心开车 安全至上，<code>disabled</code>样式</p>
+</div>
+
+<div class="note pink icon-padding simple"><i class="note-icon fas fa-car-crash"></i><p>小心开车 安全至上，<code>simple</code>样式</p>
+</div>
+
+<div class="note pink icon-padding modern"><i class="note-icon fas fa-car-crash"></i><p>小心开车 安全至上，<code>modern</code>样式</p>
+</div>
+
+<div class="note pink icon-padding flat"><i class="note-icon fas fa-car-crash"></i><p>小心开车 安全至上，<code>flat</code>样式</p>
+</div>
+
+<h2 id="图库外挂（gallery）"><a href="#图库外挂（gallery）" class="headerlink" title="图库外挂（gallery）"></a>图库外挂（gallery）</h2><p>详细内容跳转：<a href="#%E5%9B%BE%E5%BA%93%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE">图库外挂标签</a></p>
+<h2 id="切换标签（tabs）"><a href="#切换标签（tabs）" class="headerlink" title="切换标签（tabs）"></a>切换标签（tabs）</h2><p>添加文档中的切换标签，需要使用指定<code>标签外挂</code>：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>开始标签</th>
+<th>结束标签</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>标签组</td>
+<td><code>&#123;\% tabs unique_name,[index] \%&#125;</code></td>
+<td><code>&#123;% endtabs %&#125;</code></td>
+</tr>
+<tr>
+<td>子标签</td>
+<td><code>&lt;!-- tab [Tab caption] [@icon] --&gt;</code></td>
+<td><code>&lt;!-- endtab --&gt;</code></td>
+</tr>
+</tbody></table>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs Unique name, [index] %&#125;</span><br><span class="line">&lt;!-- tab [Tab caption] [@icon] --&gt;</span><br><span class="line">任何内容（也支持内联标记）</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br><span class="line">Unique name   : 唯一名称，不带逗号的块标记</span><br><span class="line"><span class="code">                将在#id中用作每个选项卡及其索引号的前缀</span></span><br><span class="line"><span class="code">                如果名称中有空格，则对于生成的&#x27;#id&#x27;，所有空格都将被短划线替换</span></span><br><span class="line"><span class="code">                仅针对当前文章/页面的url必须是唯一的</span></span><br><span class="line"><span class="code">[index]       : 激活的标签索引</span></span><br><span class="line"><span class="code">                如果未指定，默认选择第一个选项卡（1）</span></span><br><span class="line"><span class="code">                如果索引为-1，则不会选择任何选项卡</span></span><br><span class="line"><span class="code">                可选参数</span></span><br><span class="line"><span class="code">                </span></span><br><span class="line"><span class="code">------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="code"></span></span><br><span class="line">[Tab caption] : 当前标签的标题</span><br><span class="line"><span class="code">                如果未指定标题，则带有标签索引后缀的唯一名称将用作选项卡的标题</span></span><br><span class="line"><span class="code">                如果未指定标题，而是指定了图标，则标题将为空</span></span><br><span class="line"><span class="code">                可选参数</span></span><br><span class="line"><span class="code">[@icon]       : FontAwesome的图标名称（全名，类似“fas fa-font”）</span></span><br><span class="line"><span class="code">                可以指定有空格或没有空格；例如“Tab caption @icon”类似于“Tab caption@icon&#x27;</span></span><br><span class="line"><span class="code">                可选参数</span></span><br></pre></td></tr></table></figure>
+
+<p>片段代码如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs test-tab,2 %&#125;</span><br><span class="line">&lt;!-- tab 标签一 --&gt;</span><br><span class="line">标签一自定义名称</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab @fab fa-apple-pay --&gt;</span><br><span class="line">标签二没有名称，仅有icon</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab 标签三@fas fa-bomb --&gt;</span><br><span class="line">标签三有名称+icon</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<div class="tabs" id="test-tab"><ul class="nav-tabs"><button type="button" class="tab " data-href="test-tab-1">标签一</button><button type="button" class="tab  active" data-href="test-tab-2"><i class="fab fa-apple-pay" style="text-align: center;"></i></button><button type="button" class="tab " data-href="test-tab-3"><i class="fas fa-bomb"></i>标签三</button></ul><div class="tab-contents"><div class="tab-item-content" id="test-tab-1"><p>标签一自定义名称</p></div><div class="tab-item-content active" id="test-tab-2"><p>标签二没有名称，仅有icon</p></div><div class="tab-item-content" id="test-tab-3"><p>标签三有名称+icon</p></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div>
+
+<h2 id="隐藏标签（tag-hide）"><a href="#隐藏标签（tag-hide）" class="headerlink" title="隐藏标签（tag-hide）"></a>隐藏标签（tag-hide）</h2><div class="note warning flat"><p><code>v2.2.0</code>以上</p>
+<p>使用时候，tag-hide的内容不能包含<code>h1~h6</code>，因为Toc会把隐藏内容标题显示出来</p>
+</div>
+
+<p>通过这个外挂，可以隐藏文字、内容，并提供<code>按钮</code>给用户点击</p>
+<p>有几种不同的格式：inline、block、toggle</p>
+<blockquote>
+<p>inline：行内样式，可以与其他文字在同一行中</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% hideInline content,display,bg,color %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参数：</p>
+<ul>
+<li>content：文本内容（不能包含<code>英文逗号</code>，可以使用<code>&amp;sbquo;</code>代替）</li>
+<li>display：【可选】按钮显示的文字，默认<code>click</code></li>
+<li>bg：【可选】按钮的背景颜色，默认主题色</li>
+<li>color：【可选】按钮文字的颜色，默认主题色</li>
+</ul>
+<blockquote>
+<p>block：块模式，内容独占一个模块，不与前后元素同行</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% hideBlock display,bg,color %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endhideBlock %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参数：</p>
+<ul>
+<li>content：文本内容</li>
+<li>display：【可选】按钮显示的文字，默认<code>click</code></li>
+<li>bg：【可选】按钮的背景颜色，默认主题色</li>
+<li>color：【可选】按钮文字的颜色，默认主题色</li>
+</ul>
+<blockquote>
+<p>toggle：切换模式，可以显示隐藏点击切换</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% hideToggle display,bg,color %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endhideToggle %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参数：</p>
+<ul>
+<li>content：文本内容</li>
+<li>display：【可选】按钮显示的文字，默认<code>click</code>（不能包含<code>英文逗号</code>，可以使用<code>&amp;sbquo;</code>代替）</li>
+<li>bg：【可选】按钮的背景颜色，默认主题色</li>
+<li>color：【可选】按钮文字的颜色，默认主题色</li>
+</ul>
+<blockquote>
+<p>示例如下：</p>
+</blockquote>
+<p><code>hideInline</code>：</p>
+<p>哪个英文字母最酷？ <span class="hide-inline"><button type="button" class="hide-button" style="background-color: #FF7242;color: #fff">查看答案
+  </button><span class="hide-content">因为西装裤(C装酷)</span></span></p>
+<p>门里站着一个人? <span class="hide-inline"><button type="button" class="hide-button" style="">Click
+  </button><span class="hide-content">谁</span></span></p>
+<p><code>hideBlock</code>：</p>
+<p>查看答案</p>
+<div class="hide-block"><button type="button" class="hide-button" style="">查看答案
+    </button><div class="hide-content"><p>傻子，怎么可能有答案</p>
+</div></div>
+
+<p><code>hideToggle</code>：</p>
+<details class="toggle" ><summary class="toggle-button" style="">Butterfly安装方法</summary><div class="toggle-content"><p>在你的博客根目录里<br>git clone -b master <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes&#x2F;Butterfly<br>如果想要安装比较新的dev分支，可以<br>git clone -b dev <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes&#x2F;Butterfly</p>
+</div></details>
+
+<h2 id="按钮标签（button）"><a href="#按钮标签（button）" class="headerlink" title="按钮标签（button）"></a>按钮标签（button）</h2><div class="note info flat"><p><code>v3.0</code>以上适用</p>
+</div>
+
+<p>使用方法：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% btn [url],[text],[icon],[color] [style] [layout] [position] [size] %&#125;</span><br><span class="line"></span><br><span class="line">[url]         : 链接</span><br><span class="line">[text]        : 按钮文字</span><br><span class="line">[icon]        : [可选] 图标</span><br><span class="line">[color]       : [可选] 按钮背景颜色(默认style时）</span><br><span class="line"><span class="code">                      按钮字体和边框顔色(outline时)</span></span><br><span class="line"><span class="code">                      default/blue/pink/red/purple/orange/green</span></span><br><span class="line"><span class="code">[style]       : [可选] 按钮样式 默认实心</span></span><br><span class="line"><span class="code">                      outline/留空</span></span><br><span class="line"><span class="code">[layout]      : [可选] 按钮布局 默认为line</span></span><br><span class="line"><span class="code">                      block/留空</span></span><br><span class="line"><span class="code">[position]    : [可选] 按钮位置 前提是设置了layout为block 默认为左边</span></span><br><span class="line"><span class="code">                      center/right/留空</span></span><br><span class="line"><span class="code">[size]        : [可选] 按钮大小</span></span><br><span class="line"><span class="code">                      larger/留空</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>标签写法：</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% btn 链接，按钮文字，图标，颜色，样式，布局，位置，大小 %&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>示例如下：</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">普通的按钮：&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly %&#125;</span><br><span class="line">带边框按钮：&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,,outline %&#125;</span><br><span class="line">带图标颜色：&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,blue %&#125;</span><br><span class="line">带边框图标：&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,outline %&#125;</span><br><span class="line">带图标大图：&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,larger %&#125;</span><br><span class="line"></span><br><span class="line">---------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,块样式,far fa-hand-point-right,block %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,居中大图,far fa-hand-point-right,block center larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,边框大图,far fa-hand-point-right,block right outline larger %&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>实际效果：</p>
+</blockquote>
+<p>普通的按钮：<a class="btn-beautify " href="https://butterfly.js.org/" 
+  title="Butterfly"><span>Butterfly</span></a><br>带边框按钮：<a class="btn-beautify outline" href="https://butterfly.js.org/" 
+  title="Butterfly"><span>Butterfly</span></a><br>带图标颜色：<a class="btn-beautify blue" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a><br>带边框图标：<a class="btn-beautify outline" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a><br>带图标大图：<a class="btn-beautify larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a></p>
+<a class="btn-beautify block" href="https://butterfly.js.org/" 
+  title="块样式"><i class="far fa-hand-point-right"></i><span>块样式</span></a>
+<a class="btn-beautify block center larger" href="https://butterfly.js.org/" 
+  title="居中大图"><i class="far fa-hand-point-right"></i><span>居中大图</span></a>
+<a class="btn-beautify block right outline larger" href="https://butterfly.js.org/" 
+  title="边框大图"><i class="far fa-hand-point-right"></i><span>边框大图</span></a>
+
+<h2 id="内联图片（inlineImg）"><a href="#内联图片（inlineImg）" class="headerlink" title="内联图片（inlineImg）"></a>内联图片（inlineImg）</h2><p>在markdown格式中，图片默认是块级模式，如果要使用内联，可以使用<code>inlineImg</code>外挂</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% inlineImg [src] [height] %&#125;</span><br><span class="line"></span><br><span class="line">[src]      :    图片链接</span><br><span class="line">[height]   ：   图片高度限制px【可选】</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>示例如下：</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">看看风景：&#123;% inlineImg https://yuanxiapi.cn/api/img/photo/42246923.jpg 100px %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>看看风景：<img class="inline-img" src="https://yuanxiapi.cn/api/img/photo/42246923.jpg" style="height:200px" /></p>
+<h2 id="标记标签（label）"><a href="#标记标签（label）" class="headerlink" title="标记标签（label）"></a>标记标签（label）</h2><p>用来高亮显示所需要的文字，格式如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% label text color %&#125;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>text</td>
+<td>文字</td>
+</tr>
+<tr>
+<td>color</td>
+<td>【可选】背景颜色，默认为 <code>default</code><br />default&#x2F;blue&#x2F;pink&#x2F;red&#x2F;purple&#x2F;orange&#x2F;green</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>示例：</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">臣亮言：&#123;% label 先帝 %&#125;创业未半，而&#123;% label 中道崩殂 blue %&#125;。今天下三分，&#123;% label 益州疲敝 pink %&#125;，此诚&#123;% label 危急存亡之秋 red %&#125;也！然侍衞之臣，不懈于内；&#123;% label 忠志之士 purple %&#125;，忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气；不宜妄自菲薄，引喻失义，以塞忠谏之路也。</span><br><span class="line">宫中、府中，俱为一体；陟罚臧否，不宜异同。若有&#123;% label 作奸 orange %&#125;、&#123;% label 犯科 green %&#125;，及为忠善者，宜付有司，论其刑赏，以昭陛下平明之治；不宜偏私，使内外异法也。</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>实现效果：</p>
+</blockquote>
+<p>臣亮言：<mark class="hl-label default">先帝</mark> 创业未半，而<mark class="hl-label blue">中道崩殂</mark> 。今天下三分，<mark class="hl-label pink">益州疲敝</mark> ，此诚<mark class="hl-label red">危急存亡之秋</mark> 也！然侍衞之臣，不懈于内；<mark class="hl-label purple">忠志之士</mark> ，忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气；不宜妄自菲薄，引喻失义，以塞忠谏之路也。<br>宫中、府中，俱为一体；陟罚臧否，不宜异同。若有<mark class="hl-label orange">作奸</mark> 、<mark class="hl-label green">犯科</mark> ，及为忠善者，宜付有司，论其刑赏，以昭陛下平明之治；不宜偏私，使内外异法也。</p>
+<h2 id="时间轴（timeline）"><a href="#时间轴（timeline）" class="headerlink" title="时间轴（timeline）"></a>时间轴（timeline）</h2><div class="note info flat"><p><code>v4.0.0</code>版本以上适用</p>
+</div>
+
+<p>时间轴格式如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% timeline title,color %&#125;</span><br><span class="line">&lt;!-- timeline title --&gt;</span><br><span class="line">xxxxx</span><br><span class="line">&lt;!-- endtimeline --&gt;</span><br><span class="line">&lt;!-- timeline title --&gt;</span><br><span class="line">xxxxx</span><br><span class="line">&lt;!-- endtimeline --&gt;</span><br><span class="line">&#123;% endtimeline %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>标签外挂：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>开始标签</th>
+<th>结束标签</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>标题时间线</td>
+<td><code>&#123;\% timeline title,color \%&#125;</code></td>
+<td><code>&#123;% endtimeline %&#125;</code></td>
+</tr>
+<tr>
+<td>子标签</td>
+<td><code>&lt;!-- timeline title --&gt;</code></td>
+<td><code>&lt;!-- endtimeline --&gt;</code></td>
+</tr>
+</tbody></table>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td>标题&#x2F;时间线</td>
+</tr>
+<tr>
+<td>color</td>
+<td>timeline 颜色<br />default(留空)  &#x2F; blue &#x2F; pink &#x2F; red &#x2F; purple &#x2F; orange &#x2F; green</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>示例：</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% timeline 2022,blue %&#125;</span><br><span class="line">&lt;!-- timeline 01-02 --&gt;</span><br><span class="line">这是测试页面</span><br><span class="line">&lt;!-- endtimeline --&gt;</span><br><span class="line">&#123;% endtimeline %&#125;</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>效果：</p>
+</blockquote>
+<div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>2024</p>
+</div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>01-03</p>
+</div></div><div class='timeline-item-content'><p>这是测试页面3</p>
+</div></div></div>
+<div class="timeline pink"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>2023</p>
+</div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>01-02</p>
+</div></div><div class='timeline-item-content'><p>这是测试页面2</p>
+</div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>01-01</p>
+</div></div><div class='timeline-item-content'><p>这是测试页面1</p>
+</div></div></div>
+
+<h2 id="友情链接（flink）"><a href="#友情链接（flink）" class="headerlink" title="友情链接（flink）"></a>友情链接（flink）</h2><div class="note info flat"><p><code>v4.1.0</code>版本以上适用</p>
+</div>
+
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% flink %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endflink %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>content</code>可以是yml格式内容，与友情链接内容一样</p>
+<blockquote>
+<p>示例：</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% flink %&#125;</span><br><span class="line"><span class="bullet">-</span> class<span class="emphasis">_name: 友情链接</span></span><br><span class="line"><span class="emphasis">  class_</span>desc: 那些人，那些事</span><br><span class="line">  link<span class="emphasis">_list:</span></span><br><span class="line"><span class="emphasis">    - name: JerryC</span></span><br><span class="line"><span class="emphasis">      link: https://jerryc.me/</span></span><br><span class="line"><span class="emphasis">      avatar: https://jerryc.me/img/avatar.png</span></span><br><span class="line"><span class="emphasis">      descr: 今日事,今日毕</span></span><br><span class="line"><span class="emphasis">    - name: Hexo</span></span><br><span class="line"><span class="emphasis">      link: https://hexo.io/zh-tw/</span></span><br><span class="line"><span class="emphasis">      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg</span></span><br><span class="line"><span class="emphasis">      descr: 快速、简单且强大的网志框架</span></span><br><span class="line"><span class="emphasis">&#123;% endflink %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>效果如下：</p>
+</blockquote>
+<div class="flink"><div class="flink-name">友情链接</div><div class="flink-desc">那些人，那些事</div> <div class="flink-list">
+          <div class="flink-list-item">
+            <a href="https://jerryc.me/" title="JerryC" target="_blank">
+              <div class="flink-item-icon">
+                <img class="no-lightbox" src="https://jerryc.me/img/avatar.png" onerror='this.onerror=null;this.src="/blog/img/friend_404.gif"' alt="JerryC" />
+              </div>
+              <div class="flink-item-name">JerryC</div> 
+              <div class="flink-item-desc" title="今日事,今日毕">今日事,今日毕</div>
+            </a>
+          </div>
+          <div class="flink-list-item">
+            <a href="https://hexo.io/zh-tw/" title="Hexo" target="_blank">
+              <div class="flink-item-icon">
+                <img class="no-lightbox" src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" onerror='this.onerror=null;this.src="/blog/img/friend_404.gif"' alt="Hexo" />
+              </div>
+              <div class="flink-item-name">Hexo</div> 
+              <div class="flink-item-desc" title="快速、简单且强大的网志框架">快速、简单且强大的网志框架</div>
+            </a>
+          </div></div></div>
+
+<hr>
+<h2 id="内嵌框架（iframe）"><a href="#内嵌框架（iframe）" class="headerlink" title="内嵌框架（iframe）"></a>内嵌框架（iframe）</h2><blockquote>
+<p>格式：</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% iframe url [width] [height] %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参数：</p>
+<ul>
+<li>width：设置宽度，可以直接设置100%</li>
+<li>height：设置区域的高度，指定<code>px</code>，如果使用100%可能没有效果</li>
+</ul>
+<blockquote>
+<p>示例：嵌入个人主页</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% iframe https://bencky1017.github.io/ 100% 800px %&#125;</span><br></pre></td></tr></table></figure>
+
+<iframe src="https://bencky1017.github.io/" width="100%" height="800px" frameborder="0" loading="lazy" allowfullscreen></iframe>
+
+<h2 id="图片链接（img）"><a href="#图片链接（img）" class="headerlink" title="图片链接（img）"></a>图片链接（img）</h2><p>除了使用<code>![]()</code>这种Markdown格式的图片链接，也可以使用，标签形式：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% link [url<span class="emphasis">_name] [url_</span>link] [boolean] [alt] %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<ul>
+<li><p>url_name：链接名字</p>
+</li>
+<li><p>url_link：链接地址</p>
+</li>
+<li><p>boolean：判断是否使用_blank方式打开链接，true为使用</p>
+</li>
+<li><p>alt：鼠标悬浮显示的文字</p>
+</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% link 百度网址超链接 https://www.baidu.com/ true 百度 %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<a href="https://www.baidu.com/" title="百度" target="_blank">百度网址超链接</a>
+
+<h2 id="站内超链接（post-link）"><a href="#站内超链接（post-link）" class="headerlink" title="站内超链接（post_link）"></a>站内超链接（post_link）</h2><p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% post<span class="emphasis">_path filename %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% post_</span>link filename [title] [escape] %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参数：</p>
+<ul>
+<li>filename：站内目标文章的标题（精确匹配）</li>
+<li>title：替代目标文章的标题文字</li>
+<li>escape：默认true，控制特殊字符转义</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% post<span class="emphasis">_link 博客文档配置教程 &#x27;🚀 快速开始 &#x27; %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<div class="note green icon-padding flat"><i class="note-icon fas fa-rocket"></i><p> 📚  文档目录</p>
+<p><a href="/blog/posts/47472/" title="博客文档配置教程">🚀 快速开始</a></p>
+</div>
+
+<hr>
+<h1 id="图库外挂标签"><a href="#图库外挂标签" class="headerlink" title="图库外挂标签"></a>图库外挂标签</h1><h2 id="相册组（galleryGroup）"><a href="#相册组（galleryGroup）" class="headerlink" title="相册组（galleryGroup）"></a>相册组（galleryGroup）</h2><p>需要使用<code>galleryGroup</code>标签外挂，设置对应的图库：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% galleryGroup name description link img-url %&#125;</span><br><span class="line">&#123;% galleryGroup name description link img-url %&#125;</span><br><span class="line">&#123;% galleryGroup name description link img-url %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参数如下：</p>
+<ul>
+<li>name：图库名字</li>
+<li>description：图库描述</li>
+<li>link：连接到对应相册的地址</li>
+<li>img-url：图库封面的地址</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% galleryGroup &#x27;远程壁纸&#x27; &#x27;通过远程JSON链接获取的壁纸&#x27; &#x27;/gallery/bizhi&#x27; https://i.loli.net/2019/11/10/T7Mu8Aod3egmC4Q.png %&#125;</span><br><span class="line">&#123;% galleryGroup &#x27;漫威&#x27; &#x27;关于漫威的图片&#x27; &#x27;/gallery/marvel&#x27; https://i.loli.net/2019/12/25/8t97aVlp4hgyBGu.jpg %&#125;</span><br><span class="line">&#123;% galleryGroup &#x27;壁纸&#x27; &#x27;收藏下载的一些壁纸图片&#x27; &#x27;/gallery/wallpaper&#x27; &#x27;/gallery/wallpaper/img(5).jpg&#x27; %&#125;</span><br><span class="line">&#123;% galleryGroup &#x27;美女图片&#x27; &#x27;网络中的美女图片&#x27; &#x27;/gallery/meitu&#x27; &#x27;/gallery/meitu/31c44182/5479678683<span class="emphasis">_HEe8815Ou_</span>5<span class="emphasis">_005YQaKfgy1g55fpngdnxj34g02yo7wn.jpg&#x27; %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<div class="gallery-group-main">
+<figure class="gallery-group">
+  <img class="gallery-group-img no-lightbox" src='https://i.loli.net/2019/11/10/T7Mu8Aod3egmC4Q.png' alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">远程壁纸</div>
+  <p>通过远程JSON链接获取的壁纸</p>
+  <a href='/blog/gallery/bizhi'></a>
+  </figcaption>
+  </figure>
+  
+<figure class="gallery-group">
+  <img class="gallery-group-img no-lightbox" src='https://i.loli.net/2019/12/25/8t97aVlp4hgyBGu.jpg' alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">漫威</div>
+  <p>关于漫威的图片</p>
+  <a href='/blog/gallery/marvel'></a>
+  </figcaption>
+  </figure>
+  
+<figure class="gallery-group">
+  <img class="gallery-group-img no-lightbox" src='/blog/gallery/wallpaper/img(5).jpg' alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">壁纸</div>
+  <p>收藏下载的一些壁纸图片</p>
+  <a href='/blog/gallery/wallpaper'></a>
+  </figcaption>
+  </figure>
+  
+<figure class="gallery-group">
+  <img class="gallery-group-img no-lightbox" src='/blog/gallery/meitu/31c44182/5479678683_HEe8815Ou_5_005YQaKfgy1g55fpngdnxj34g02yo7wn.jpg' alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">美女图片</div>
+  <p>网络中的美女图片</p>
+  <a href='/blog/gallery/meitu'></a>
+  </figcaption>
+  </figure>
+  
+</div>
+
+
+
+<h2 id="子页面（gallery）"><a href="#子页面（gallery）" class="headerlink" title="子页面（gallery）"></a>子页面（gallery）</h2><p>使用标签外挂<code>gallery</code>，里面显示对应的图片，图片会自适应形成一个横向瀑布流</p>
+<p>分为<code>本地</code>和<code>远程</code>两种方式：</p>
+<div class="tabs" id="gallery"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="gallery-1">本地</button><button type="button" class="tab " data-href="gallery-2">远程</button></ul><div class="tab-contents"><div class="tab-item-content active" id="gallery-1"><p>格式如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gallery [lazyload],[rowHeight],[limit] %&#125;</span><br><span class="line">markdown 图片格式</span><br><span class="line">&#123;% endgallery %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>具体参数如下：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>lazyload</td>
+<td>【可选】点击按钮加载更多图片，填写 true&#x2F;false。默认为 false。</td>
+</tr>
+<tr>
+<td>rowHeight</td>
+<td>【可选】图片显示的高度，如果需要一行显示更多的图片，可设置更小的数字。默认为 220。</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>【可选】每次加载多少张照片。默认为 10。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p> 格式示例如下：</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gallery %&#125;</span><br><span class="line">markdown 图片格式</span><br><span class="line">&#123;% endgallery %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% gallery true,220,10 %&#125;</span><br><span class="line">markdown 图片格式</span><br><span class="line">&#123;% endgallery %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% gallery true,,10 %&#125;</span><br><span class="line">markdown 图片格式</span><br><span class="line">&#123;% endgallery %&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>实现效果：</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gallery %&#125;</span><br><span class="line">![](<span class="link">https://i.loli.net/2019/12/25/Fze9jchtnyJXMHN.jpg</span>)</span><br><span class="line">![](<span class="link">https://i.loli.net/2019/12/25/ryLVePaqkYm4TEK.jpg</span>)</span><br><span class="line">![](<span class="link">https://i.loli.net/2019/12/25/gEy5Zc1Ai6VuO4N.jpg</span>)</span><br><span class="line">![](<span class="link">https://i.loli.net/2019/12/25/d6QHbytlSYO4FBG.jpg</span>)</span><br><span class="line">![](<span class="link">https://i.loli.net/2019/12/25/6nepIJ1xTgufatZ.jpg</span>)</span><br><span class="line">![](<span class="link">https://i.loli.net/2019/12/25/E7Jvr4eIPwUNmzq.jpg</span>)</span><br><span class="line">![](<span class="link">https://i.loli.net/2019/12/25/mh19anwBSWIkGlH.jpg</span>)</span><br><span class="line">![](<span class="link">https://i.loli.net/2019/12/25/2tu9JC8ewpBFagv.jpg</span>)</span><br><span class="line">&#123;% endgallery %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="gallery-container" data-type="data" data-button="">
+      <div class="gallery-data">[{"url":"https://i.loli.net/2019/12/25/Fze9jchtnyJXMHN.jpg","alt":""},{"url":"https://i.loli.net/2019/12/25/ryLVePaqkYm4TEK.jpg","alt":""},{"url":"https://i.loli.net/2019/12/25/gEy5Zc1Ai6VuO4N.jpg","alt":""},{"url":"https://i.loli.net/2019/12/25/d6QHbytlSYO4FBG.jpg","alt":""},{"url":"https://i.loli.net/2019/12/25/6nepIJ1xTgufatZ.jpg","alt":""},{"url":"https://i.loli.net/2019/12/25/E7Jvr4eIPwUNmzq.jpg","alt":""},{"url":"https://i.loli.net/2019/12/25/mh19anwBSWIkGlH.jpg","alt":""},{"url":"https://i.loli.net/2019/12/25/2tu9JC8ewpBFagv.jpg","alt":""}]</div>
+      <div class="gallery-items">
+      </div>
+    </div></div><div class="tab-item-content" id="gallery-2"><p>格式如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gallery url,[link],[lazyload],[rowHeight],[limit] %&#125;</span><br><span class="line">&#123;% endgallery %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>具体参数如下：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>url</code></td>
+<td>【必须】 识别词</td>
+</tr>
+<tr>
+<td><code>link</code></td>
+<td>【必须】远程的 json 链接</td>
+</tr>
+<tr>
+<td>lazyload</td>
+<td>【可选】点击按钮加载更多图片，填写 true&#x2F;false。默认为 false。</td>
+</tr>
+<tr>
+<td>rowHeight</td>
+<td>【可选】图片显示的高度，如果需要一行显示更多的图片，可设置更小的数字。默认为 220。</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>【可选】每次加载多少张照片。默认为 10。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>示例如下：</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gallery url,https://xxxx.com/sss.json %&#125;</span><br><span class="line">&#123;% endgallery %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% gallery url,https://xxxx.com/sss.json,true,220,10 %&#125;</span><br><span class="line">&#123;% endgallery %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% gallery url,https://xxxx.com/sss.json,true,,10 %&#125;</span><br><span class="line">&#123;% endgallery %&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>其中，<code>JSON</code>文件的格式如下，<code>url</code>必须存在，<code>alt</code>和<code>title</code>可选</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line"><span class="code">    &quot;url&quot;: &quot;https://cdn.jsdelivr.net/gh/bencky1017/blog/gallery/wallpaper/img(1).jpg&quot;,</span></span><br><span class="line"><span class="code">    &quot;alt&quot;: &quot;img(1).jpg&quot;,</span></span><br><span class="line"><span class="code">    &quot;title&quot;: &quot;这是title&quot;</span></span><br><span class="line"><span class="code">  &#125;,</span></span><br><span class="line"><span class="code">  &#123;</span></span><br><span class="line"><span class="code">    &quot;url&quot;: &quot;https://cdn.jsdelivr.net/gh/bencky1017/blog/gallery/wallpaper/img(5).jpg&quot;,</span></span><br><span class="line"><span class="code">    &quot;alt&quot;: &quot;img(5).jpg&quot;</span></span><br><span class="line"><span class="code">  &#125;,</span></span><br><span class="line"><span class="code">  &#123;</span></span><br><span class="line"><span class="code">    &quot;url&quot;: &quot;https://cdn.jsdelivr.net/gh/bencky1017/blog/gallery/wallpaper/img(7).jpg&quot;,</span></span><br><span class="line"><span class="code">    &quot;alt&quot;: &quot;&quot;</span></span><br><span class="line"><span class="code">  &#125;,</span></span><br><span class="line"><span class="code">  &#123;</span></span><br><span class="line"><span class="code">    &quot;url&quot;: &quot;https://cdn.jsdelivr.net/gh/bencky1017/blog/gallery/wallpaper/img(13).jpg&quot;,</span></span><br><span class="line"><span class="code">    &quot;alt&quot;: &quot;&quot;,</span></span><br><span class="line"><span class="code">    &quot;title&quot;: &quot;海边晚霞&quot;</span></span><br><span class="line"><span class="code">  &#125;,</span></span><br><span class="line"><span class="code">  &#123;</span></span><br><span class="line"><span class="code">    &quot;url&quot;: &quot;https://cdn.jsdelivr.net/gh/bencky1017/blog/gallery/wallpaper/img(15).jpg&quot;,</span></span><br><span class="line"><span class="code">    &quot;alt&quot;: &quot;&quot;,</span></span><br><span class="line"><span class="code">    &quot;title&quot;: &quot;赛博科技&quot;</span></span><br><span class="line"><span class="code">  &#125;</span></span><br><span class="line"><span class="code">]</span></span><br></pre></td></tr></table></figure>
+
+<p>实现效果：</p>
+<div class="gallery-container" data-type="url" data-button="undefined">
+      <div class="gallery-data">/blog/gallery/bizhi/bizhi.json</div>
+      <div class="gallery-items">
+      </div>
+    </div></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div>
+
+<div class="note pink icon-padding flat"><i class="note-icon fas fa-sitemap"></i><p>如果你想要使用 <code>/gallery/wallpaper</code> 这样的链接显示图片</p>
+<p>你可以把创建好的 <code>wallpaper</code> 整个文件夹移到 <code>gallery</code> 文件夹里去</p>
+</div>
+
+<hr>
+<h1 id="嵌入代码（Include-Code）"><a href="#嵌入代码（Include-Code）" class="headerlink" title="嵌入代码（Include Code）"></a>嵌入代码（Include Code）</h1><h2 id="引入格式"><a href="#引入格式" class="headerlink" title="引入格式"></a>引入格式</h2><p>插入 <code>source/downloads/code</code> 文件夹内的代码文件。<code>source/downloads/code</code> 不是固定的，取决于你在配置文件中 <code>code_dir</code> 的配置。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% include_code [title] [lang:language] [from:line] [to:line] path/to/file %&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><strong>嵌入 test.js 文件全文</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript test.js %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>只嵌入第 3 行</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript from:3 to:3 test.js %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>嵌入第 5 行至第 8 行</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript from:5 to:8 test.js %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>嵌入第 5 行至文件结束</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript from:5 test.js %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>嵌入第 1 行至第 8 行</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript to:8 test.js %&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="自定义侧边栏（Aside）"><a href="#自定义侧边栏（Aside）" class="headerlink" title="自定义侧边栏（Aside）"></a>自定义侧边栏（Aside）</h1><p>可以添加自己喜欢的<code>widget</code> </p>
+<h2 id="widget-排序"><a href="#widget-排序" class="headerlink" title="widget 排序"></a>widget 排序</h2><p>只需要配置 sort_order就行，配置数字来实现排序，如果不配置，则默认为 0。数字越小，排序越靠前。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">aside:</span></span><br><span class="line"> <span class="string">...</span></span><br><span class="line">  <span class="attr">card_recent_post:</span></span><br><span class="line">    <span class="attr">sort_order:</span> <span class="comment"># Don&#x27;t modify the setting unless you know how it works</span></span><br><span class="line">  <span class="attr">card_categories:</span></span><br><span class="line">    <span class="attr">sort_order:</span> <span class="comment"># Don&#x27;t modify the setting unless you know how it works</span></span><br><span class="line">  <span class="attr">card_tags:</span></span><br><span class="line">    <span class="attr">sort_order:</span> <span class="comment"># Don&#x27;t modify the setting unless you know how it works</span></span><br><span class="line">  <span class="attr">card_archives:</span></span><br><span class="line">    <span class="attr">sort_order:</span> <span class="comment"># Don&#x27;t modify the setting unless you know how it works</span></span><br><span class="line">  <span class="attr">card_webinfo:</span></span><br><span class="line">    <span class="attr">sort_order:</span> <span class="comment"># Don&#x27;t modify the setting unless you know how it works</span></span><br><span class="line"></span><br><span class="line"><span class="attr">newest_comments:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">sort_order:</span> <span class="comment"># Don&#x27;t modify the setting unless you know how it works</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="添加widget"><a href="#添加widget" class="headerlink" title="添加widget"></a>添加widget</h2><p>在Hexo博客目录中的<code>source/_data</code>，创建一个文件<code>widget.yml</code></p>
+<p>格式如下：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">top:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">class_name:</span></span><br><span class="line">    <span class="attr">id_name:</span></span><br><span class="line">    <span class="attr">name:</span></span><br><span class="line">    <span class="attr">icon:</span></span><br><span class="line">    <span class="attr">html:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">bottom:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">class_name:</span></span><br><span class="line">    <span class="attr">id_name:</span></span><br><span class="line">    <span class="attr">name:</span></span><br><span class="line">    <span class="attr">icon:</span></span><br><span class="line">    <span class="attr">order:</span></span><br><span class="line">    <span class="attr">html:</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>top</strong>: 创建的 widget 会出现在<code> 非sticky</code> 区域（即所有页面都会显示)</p>
+<p><strong>bottom</strong>: 创建的 widget 会出现在 <code>sticky</code> 区域（除了文章页都会显示)</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>class_name</td>
+<td>所创建的 widget 父类 class 名 （可选）</td>
+</tr>
+<tr>
+<td>id_name</td>
+<td>所创建的 widget 父类 id 名（可选）</td>
+</tr>
+<tr>
+<td>name</td>
+<td>所创建的 widget 标题</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>所创建的 widget 图标</td>
+</tr>
+<tr>
+<td>order</td>
+<td>所创建的 widget 排序 （可选）</td>
+</tr>
+<tr>
+<td>html</td>
+<td>所创建的 widget 相关代码</td>
+</tr>
+</tbody></table>
+<p><img src="https://jsd.012700.xyz/gh/jerryc127/CDN/img/adside-diy-parameter.png"></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-widget 所写的 class_name&quot;</span> <span class="attr">id</span>=<span class="string">&quot;所写的 id_name&quot;</span> <span class="attr">style</span>=<span class="string">&quot;order: 所写的 order&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item-headline&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;所写的 icon&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>所写的 name<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item-content&quot;</span>&gt;</span></span><br><span class="line">        所写的 html</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h1 id="搜索系统（Search）"><a href="#搜索系统（Search）" class="headerlink" title="搜索系统（Search）"></a>搜索系统（Search）</h1><p>使用本地搜索功能，使用依赖<code>hexo-generator-searchdb</code>官网地址：<a href="https://github.com/next-theme/hexo-generator-searchdb">hexo-generator-searchdb</a> </p>
+<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><p>在博客根目录文件夹中运行git，执行指令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="注入配置"><a href="#注入配置" class="headerlink" title="注入配置"></a>注入配置</h2><p>在根目录的<code>_config.yml</code>文件中添加以下配置信息：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参数说明：</p>
+</blockquote>
+<ul>
+<li><strong>path</strong> - 文件路径。默认为<code>search.xml</code>。如果文件扩展名是<code>.json</code>，则输出格式为 JSON。否则将导出 XML 格式的文件。</li>
+<li><strong>field</strong> - 您要搜索的搜索范围，您可以选择：<ul>
+<li><strong>post</strong> (默认) - 仅涵盖您博客的所有帖子。</li>
+<li><strong>page</strong> - 仅涵盖您博客的所有页面。</li>
+<li><strong>all</strong> - 将涵盖您博客的所有帖子和页面。</li>
+</ul>
+</li>
+<li><strong>content</strong> - 是否包含每篇文章的全部内容。如果<code>false</code>，生成的结果只包含标题和其他meta信息，不包含正文。默认为<code>true</code>。</li>
+<li><strong>format</strong> - 页面内容的形式，选项有：<ul>
+<li><strong>html</strong> (默认) - 被最小化的原始 html 字符串。</li>
+<li><strong>striptags</strong> - 原始 html 字符串被最小化，并删除所有标签。</li>
+<li><strong>raw</strong> - 每个帖子或页面的 markdown 文本。</li>
+</ul>
+</li>
+</ul>
+<h2 id="开启搜索"><a href="#开启搜索" class="headerlink" title="开启搜索"></a>开启搜索</h2><p>在主题配置文件<code>_config.butterfly.yml</code>中修改内容：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 加载页面时预加载搜索数据</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># 显示每篇文章的前n个结果，通过设置为-1显示所有结果</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># 将html字符串解压缩为可读字符串</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 搜索文件的 CDN 地址（默认使用的本地链接）</span></span><br><span class="line">  <span class="attr">CDN:</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="固定链接（Abbrlink）"><a href="#固定链接（Abbrlink）" class="headerlink" title="固定链接（Abbrlink）"></a>固定链接（Abbrlink）</h1><p>Hexo 默认 <code>url</code> 格式是：<code>:year/:month/:day/:title</code></p>
+<p>是按照年、月、日、文章标题来生成固定链接的。如：<code>https://xxxx.github.io/2022/11/23/hello-world</code></p>
+<p>这种方式链接过长，同时中文字符还会被转码，可以使用<code>Abbrlink</code>插件为每篇文章生成一个唯一编号，也不会因为修改文章而改变链接。</p>
+<blockquote>
+<p>安装插件：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>修改根目录下的<code>_config.yml</code>文件，修改文件中的 <code>permalink:</code> 配置项，并添加一个配置项 <code>abbrlink:</code>，</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">posts/:abbrlink/</span>  <span class="comment"># 默认 :year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">    <span class="attr">alg:</span> <span class="string">crc16</span>   <span class="comment">#算法：crc16(默认) 和 crc32</span></span><br><span class="line">    <span class="attr">rep:</span> <span class="string">dec</span>     <span class="comment">#进制：dec(十进制，默认) 和 hex</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>链接形式示例：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://xxxx.github.io/posts/3ab8.html</span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://xxxx.github.io/posts/28591.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://xxxx.github.io/posts/23ab1cd3.html</span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://xxxx.github.io/posts/5471416323.html</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="文章写作（Post）"><a href="#文章写作（Post）" class="headerlink" title="文章写作（Post）"></a>文章写作（Post）</h1><blockquote>
+<p>运行服务</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>打开本地运行的网页：<a href="http://localhost:4000/"><code>http://localhost:4000/</code></a> 实时查看网页</p>
+<blockquote>
+<p>新建发布文章（post）</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new post <span class="string">&quot;文章名字1&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>此操作会在对应的<code>source/_post/</code>中生成一个文件<code>文章名字1.md</code>的文档</p>
+<p>此时刷新网页，文章会显示出来</p>
+<blockquote>
+<p>新建草稿（draft）</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;文章名字2&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>新建草稿完成后，<code>_draft</code>文件夹出现该文章，但是刷新页面，没有显示对应的文章<code>文章名字2.md</code></p>
+<blockquote>
+<p>发布草稿</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo publish <span class="string">&quot;文章名字2&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>发布完成后，<code>_draft</code>文件夹里面的文件消失，跑到<code>_post</code>文件夹中，说明发布成功</p>
+<blockquote>
+<p>生成并部署文章</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo gengerate</span><br><span class="line"><span class="comment"># 缩写 hexo g</span></span><br></pre></td></tr></table></figure>
+
+<p>执行后生成静态文章</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line"><span class="comment"># 缩写 hexo d</span></span><br></pre></td></tr></table></figure>
+
+<p>部署文章</p>
+<blockquote>
+<p>清除缓存</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>此方法主要使用在出现操作不生效，会清除缓存文件<code>db.json</code>和静态文件<code>public</code></p>
+<hr>
+<h1 id="插入豆瓣电影页面（Douban）"><a href="#插入豆瓣电影页面（Douban）" class="headerlink" title="插入豆瓣电影页面（Douban）"></a>插入豆瓣电影页面（Douban）</h1><p>安装依赖库：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-douban --save</span><br></pre></td></tr></table></figure>
+
+<p>在博客的配置文件中：<code>_config.yml</code>配置豆瓣电影的数据</p>
+<h2 id="精简配置"><a href="#精简配置" class="headerlink" title="精简配置"></a>精简配置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">douban:</span><br><span class="line">  id: 162448367</span><br><span class="line">  book:</span><br><span class="line">    title: &quot;This is my book title&quot;</span><br><span class="line">  movie:</span><br><span class="line">    title: &quot;This is my movie title&quot;</span><br><span class="line">  game:</span><br><span class="line">    title: &quot;This is my game title&quot;</span><br><span class="line">  song:</span><br><span class="line">    title: &quot;This is my song title&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="完整配置"><a href="#完整配置" class="headerlink" title="完整配置"></a>完整配置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">douban:</span><br><span class="line">  id: 162448367</span><br><span class="line">  builtin: false</span><br><span class="line">  dynamic: false</span><br><span class="line">  item_per_page: 10</span><br><span class="line">  meta_max_line: 4</span><br><span class="line">  customize_layout: page</span><br><span class="line">  swup: false</span><br><span class="line">  book:</span><br><span class="line">    path: books/index.html</span><br><span class="line">    title: &quot;This is my book title&quot;</span><br><span class="line">    quote: &quot;This is my book quote&quot;</span><br><span class="line">    actions:</span><br><span class="line">      - do</span><br><span class="line">      - wish</span><br><span class="line">      - collect</span><br><span class="line">    option:</span><br><span class="line">  movie:</span><br><span class="line">    path: movies/index.html</span><br><span class="line">    title: &quot;This is my movie title&quot;</span><br><span class="line">    quote: &quot;This is my movie quote&quot;</span><br><span class="line">    actions:</span><br><span class="line">      - do</span><br><span class="line">      - wish</span><br><span class="line">      - collect</span><br><span class="line">    option:</span><br><span class="line">  game:</span><br><span class="line">    path: games/index.html</span><br><span class="line">    title: &quot;This is my game title&quot;</span><br><span class="line">    quote: &quot;This is my game quote&quot;</span><br><span class="line">    actions:</span><br><span class="line">      - do</span><br><span class="line">      - wish</span><br><span class="line">      - collect</span><br><span class="line">    option:</span><br><span class="line">  song:</span><br><span class="line">    path: songs/index.html</span><br><span class="line">    title: &quot;This is my song title&quot;</span><br><span class="line">    quote: &quot;This is my song quote&quot;</span><br><span class="line">    actions:</span><br><span class="line">      - do</span><br><span class="line">      - wish</span><br><span class="line">      - collect</span><br><span class="line">    option:</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>id</strong>: 你的豆瓣 ID(纯数字格式，不是自定义的域名)。获取方法可以参考<a href="https://www.zhihu.com/question/19634899">怎样获取豆瓣的数字 ID ？</a></li>
+<li><strong>builtin</strong>: 是否将<code>hexo douban</code>命令默认嵌入进<code>hexo g</code>、<code>hexo s</code>，使其自动执行<code>hexo douban</code> 命令。默认关闭。</li>
+<li><strong>dynamic</strong>: 豆瓣页面是否在访问时实时请求接口。默认为 false，表示页面信息会在执行 hexo douban 命令时更新，优点是生成的页面不会受到后续接口可用性的影响，缺点是需要手动更新。如果设置为 true ，则会在页面访问时实时调用接口进行渲染，无需执行 hexo douban 命令更新页面，但是代价就是如果接口挂了，页面就会G。</li>
+<li><strong>item_per_page</strong>: 每页展示的条目数，默认 10 。</li>
+<li><strong>meta_max_line</strong>: 每个条目展示的详细信息的最大行数，超过该行数则会以 “…” 省略，默认 4 。</li>
+<li><strong>customize_layout</strong>: 自定义布局文件。默认值为 page 。无特别需要，留空即可。若配置为 <code>abcd</code>，则表示指定 <code>//theme/hexo-theme/layout/abcd.ejs</code> 文件渲染豆瓣页面。</li>
+<li><strong>swup</strong>: 是否兼容 <a href="https://swup.js.org/plugins/scripts-plugin/">swup</a> 。支持 script 热加载，解决一些 single-page 主题的加载问题，默认 false 。</li>
+<li><strong>path</strong>: 生成页面后的路径，默认生成在 &#x2F;&#x2F;yourblog&#x2F;books&#x2F;index.html 等下面。如需自定义路径，则可以修改这里。</li>
+<li><strong>title</strong>: 该页面的标题。</li>
+<li><strong>quote</strong>: 写在页面开头的一段话,支持 html 语法，可以为空。</li>
+<li><strong>actions</strong>: 一个字符串列表，表示生成的页面中的”已 X”，”想 X”,”X 过”的标签配置，默认会自动聚焦在第一个标签。可选项为: ‘do’,’wish’,’collect’。</li>
+<li><strong>option</strong>: 该页面额外的 Front-matter 配置，参考<a href="https://hexo.io/docs/front-matter.html">Hexo 文档</a>。无特别需要，留空即可。</li>
+</ul>
+<p>如果只想显示某一个页面(比如 movie)，那就把其他的配置项注释掉即可。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>使用帮助文档：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo douban -h</span><br><span class="line">Usage: hexo douban</span><br><span class="line"></span><br><span class="line">Description:</span><br><span class="line">Generate pages from douban</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -b, --books   Generate douban books only</span><br><span class="line">  -g, --games   Generate douban games only</span><br><span class="line">  -m, --movies  Generate douban movies only</span><br><span class="line">  -s, --songs   Generate douban songs only</span><br></pre></td></tr></table></figure>
+
+<p>主动生成豆瓣页面：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo douban</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  0 (wish), 0 (<span class="keyword">do</span>),0 (collect) game loaded <span class="keyword">in</span> 729 ms</span><br><span class="line">INFO  0 (wish), 0 (<span class="keyword">do</span>),20 (collect) song loaded <span class="keyword">in</span> 761 ms</span><br><span class="line">INFO  2 (wish), 0 (<span class="keyword">do</span>),136 (collect) book loaded <span class="keyword">in</span> 940 ms</span><br><span class="line">INFO  30 (wish), 0 (<span class="keyword">do</span>),6105 (collect) movie loaded <span class="keyword">in</span> 4129 ms</span><br><span class="line">INFO  Generated: books/index.html</span><br><span class="line">INFO  Generated: movies/index.html</span><br><span class="line">INFO  Generated: games/index.html</span><br><span class="line">INFO  Generated: songs/index.html</span><br></pre></td></tr></table></figure>
+
+<p>如果不加参数，生成的是四个类型的配置</p>
+<hr>
+<h1 id="添加Artitalk说说"><a href="#添加Artitalk说说" class="headerlink" title="添加Artitalk说说"></a>添加Artitalk说说</h1><p>Artitalk官网： <a href="https://artitalk.js.org/">Artitalk</a> </p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装依赖插件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-butterfly-artitalk</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>LeanCloud 配置 參考 <a href="https://artitalk.js.org/doc.html#%F0%9F%8C%88-leancloud-%E7%9A%84%E7%9B%B8%E5%85%B3%E5%87%86%E5%A4%87">Artitalk 文档 - LeanCloud 的相关准备</a> </p>
+<blockquote>
+<p>添加配置</p>
+</blockquote>
+<p>可以在Hexo配置文件<code>_config.yml</code>或者在主题的配置文件<code>_config.xxxxxx.yml</code>中进行添加</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Artitalk</span></span><br><span class="line"><span class="comment"># see https://artitalk.js.org/</span></span><br><span class="line"><span class="attr">artitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">appId:</span></span><br><span class="line">  <span class="attr">appKey:</span></span><br><span class="line">  <span class="attr">path:</span></span><br><span class="line">  <span class="attr">js:</span></span><br><span class="line">  <span class="attr">option:</span></span><br><span class="line">  <span class="attr">front_matter:</span></span><br></pre></td></tr></table></figure>
+
+<p>参数描述：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>appId</td>
+<td>【必须】LeanCloud 创建的应用中的 AppID</td>
+</tr>
+<tr>
+<td>appKey</td>
+<td>【必须】LeanCloud 创建的应用中的 AppKEY</td>
+</tr>
+<tr>
+<td>path</td>
+<td>【可选】Artitalk 的路径名称（默认为 <code>artitalk</code>，生成的页面为 artitalk&#x2F;index.html）</td>
+</tr>
+<tr>
+<td>js</td>
+<td>【可选】更換 Artitalk 的 js CDN（默认为 <code>https://cdn.jsdelivr.net/npm/artitalk</code>）</td>
+</tr>
+<tr>
+<td>option</td>
+<td>【可选】Artitalk 需要的额外配置，如<code>lang: zh</code></td>
+</tr>
+<tr>
+<td>front_matter</td>
+<td>【可选】Artitalk 页面的 front_matter 配置</td>
+</tr>
+</tbody></table>
+<h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><p>在博客根目录下面创建目录：<code>/source/shuoshuo/</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page shuoshuo</span><br></pre></td></tr></table></figure>
+
+<p>并在页面的Front-matter配置：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: shuoshuo</span><br><span class="line">date: 2024-07-01 22:02:40</span><br><span class="line">updated: 2024-07-01 22:02:40</span><br><span class="line">type: &quot;artitalk&quot;</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Artitalk 说说系统</span></span><br><span class="line"><span class="comment"># see https://artitalk.js.org/</span></span><br><span class="line"><span class="attr">artitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="string">KhuCxxxxxxxxxxxxxxxxxDvg-xxxxxxx</span></span><br><span class="line">  <span class="attr">appKey:</span> <span class="string">ijKxxxxxxxxxxxxxxxxxopgy</span> <span class="comment"># </span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">shuoshuo</span>	<span class="comment"># 就这个path，不能写“/”</span></span><br><span class="line">  <span class="attr">js:</span></span><br><span class="line">  <span class="attr">option:</span></span><br><span class="line">    <span class="attr">lang:</span> <span class="string">zh</span></span><br><span class="line">  <span class="attr">front_matter:</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>配置成功后，会显示系统的默认提示说说内容</p>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>登录后，点击右上角的删除按钮可以删除此条说说</p>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>点击头像，进入修改界面，保存后可以实现修改</p>
+<h3 id="评论回复"><a href="#评论回复" class="headerlink" title="评论回复"></a>评论回复</h3><p>点击右下角的评论内容，可以进行评论，输入邮箱可以自动获取头像</p>
+<hr>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>帮助文档</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+</search>
