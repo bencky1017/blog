@@ -1,6 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Vue-cli脚手架创建vue3项目</title>
+    <url>/blog/posts/38573/</url>
+    <content><![CDATA[<p><font size=5 color=#f33b45><strong>Vue-cli脚手架创建vue3项目</strong></font></p>
+<p><font size=4 color=#3399ea><strong>原创：丶无殇&emsp;&emsp;2023-02-07</strong></font></p>
+<hr>
+<p>如果需要使用vite可以跳转<a href="#vite_255">文章末尾</a></p>
+<hr>
+<h1 id="Vue-cli脚手架创建vue3项目"><a href="#Vue-cli脚手架创建vue3项目" class="headerlink" title="Vue-cli脚手架创建vue3项目"></a>Vue-cli脚手架创建vue3项目</h1><h2 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a>安装vue-cli脚手架</h2><p>执行：<code>npm install -g @vue/cli</code></p>
+<p>脚手架安装具体内容不在此赘述</p>
+<hr>
+<h2 id="创建项目（默认配置）"><a href="#创建项目（默认配置）" class="headerlink" title="创建项目（默认配置）"></a>创建项目（默认配置）</h2><p>执行<code>vue create &#123;filename&#125;</code></p>
+<p><code>&#123;filename&#125;</code>整个替换为你的项目名称，一定要<code>全部小写</code>，否则会报错：</p>
+<blockquote>
+<p>Warning: name can no longer contain capital letters</p>
+</blockquote>
+<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>输入：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">vue create test01</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">Vue <span class="built_in">CLI</span> v5.<span class="number">0.8</span></span><br><span class="line"></span><br><span class="line">? Please pick a preset:</span><br><span class="line">&gt; Default ([<span class="type">Vue</span> <span class="number">3</span>] babel, eslint) </span><br><span class="line">  Default ([<span class="type">Vue</span> <span class="number">2</span>] babel, eslint) </span><br><span class="line">  Manually <span class="built_in">select</span> features</span><br></pre></td></tr></table></figure>
+
+<p>使用<kbd>↑</kbd><kbd>↓</kbd>按键操作，<code>&gt;</code>指向的为选中的</p>
+<p>然后输入：回车</p>
+<p>输出：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">Vue <span class="built_in">CLI</span> v5.<span class="number">0.8</span></span><br><span class="line">✨  Creating project <span class="keyword">in</span> ██████████████████████████████\test01.</span><br><span class="line">⚙️  Installing <span class="built_in">CLI</span> plugins. This might take a <span class="keyword">while</span>...</span><br><span class="line"></span><br><span class="line">[██████<span class="type">............</span>] / idealTree:serve<span class="literal">-index</span>: sill fetch manifest unpipe<span class="selector-tag">@</span>~<span class="number">1.0</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>然后安装好之后会显示：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">added <span class="number">102</span> packages <span class="keyword">in</span> <span class="number">20</span>s</span><br><span class="line">⚓  Running completion hooks...</span><br><span class="line"></span><br><span class="line">📄  Generating README.md...</span><br><span class="line"></span><br><span class="line">🎉  Successfully created project vue3test.</span><br><span class="line">👉  Get started with the following commands:</span><br><span class="line"></span><br><span class="line"> <span class="variable">$</span> <span class="built_in">cd</span> test01</span><br><span class="line"> <span class="variable">$</span> npm run serve</span><br></pre></td></tr></table></figure>
+
+<p>至此项目创建完成，这是默认配置的创建，如果需要手动配置，可进行以下操作</p>
+<hr>
+<h2 id="创建项目（手动配置）"><a href="#创建项目（手动配置）" class="headerlink" title="创建项目（手动配置）"></a>创建项目（手动配置）</h2><p>执行<code>vue create &#123;filename&#125;</code></p>
+<p><code>&#123;filename&#125;</code>整个替换为你的项目名称，一定要<code>全部小写</code>，否则会报错：</p>
+<blockquote>
+<p>Warning: name can no longer contain capital letters</p>
+</blockquote>
+<h3 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a>创建</h3><p>输入：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">vue create test02</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">Vue <span class="built_in">CLI</span> v5.<span class="number">0.8</span></span><br><span class="line"></span><br><span class="line">? Please pick a preset:</span><br><span class="line">  Default ([<span class="type">Vue</span> <span class="number">3</span>] babel, eslint) </span><br><span class="line">  Default ([<span class="type">Vue</span> <span class="number">2</span>] babel, eslint) </span><br><span class="line">&gt; Manually <span class="built_in">select</span> features</span><br></pre></td></tr></table></figure>
+
+<p>使用<kbd>↑</kbd><kbd>↓</kbd>按键操作，<code>&gt;</code>指向的为选中的</p>
+<p>然后输入：回车</p>
+<h3 id="配置功能"><a href="#配置功能" class="headerlink" title="配置功能"></a>配置功能</h3><p>回车后会显示功能列表，可以根据项目的需求选择对应的功能：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Check the features needed <span class="keyword">for</span> your project: (Press &lt;space&gt; to <span class="built_in">select</span>, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection, and &lt;enter&gt; to proceed)</span><br><span class="line">&gt;(*) Babel</span><br><span class="line"> ( ) TypeScript</span><br><span class="line"> ( ) Progressive Web App (PWA) Support</span><br><span class="line"> ( ) Router</span><br><span class="line"> ( ) Vuex</span><br><span class="line"> ( ) CSS Pre<span class="literal">-processors</span></span><br><span class="line"> (*) Linter / Formatter</span><br><span class="line"> ( ) Unit Testing</span><br><span class="line"> ( ) E2E Testing</span><br></pre></td></tr></table></figure>
+
+<p>此时，可以通过<kbd>空格(Space)</kbd>进行选择和取消选择，<kbd>a</kbd>全选，<kbd>i</kbd>反选，<kbd>回车(Enter)</kbd>继续</p>
+<p><code>Router</code>和<code>Vuex</code>一般会用上，如果是单页应用可以不选择</p>
+<p>选择完成后回车</p>
+<h3 id="版本选择"><a href="#版本选择" class="headerlink" title="版本选择"></a>版本选择</h3><p>然后根据项目需求选择<code>Vue.js</code>的版本</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Choose a version of Vue.js that you want to <span class="built_in">start</span> the project with (Use arrow keys)</span><br><span class="line">&gt; <span class="number">3</span>.x</span><br><span class="line">  <span class="number">2</span>.x</span><br></pre></td></tr></table></figure>
+
+<p>现在大多是<code>Vue3</code>，所以选择默认的<code>3.x</code>后回车即可</p>
+<h3 id="History模式"><a href="#History模式" class="headerlink" title="History模式"></a>History模式</h3><p>此处需要选择<code>是否使用路由的历史记录模式</code>，一般选择是，也可根据项目需求来</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Use <span class="built_in">history</span> mode <span class="keyword">for</span> router? (Requires proper server setup <span class="keyword">for</span> index fallback <span class="keyword">in</span> production) (Y/n) </span><br></pre></td></tr></table></figure>
+
+<p>输入<code>Y</code>后回车</p>
+<h3 id="格式检测"><a href="#格式检测" class="headerlink" title="格式检测"></a>格式检测</h3><p>接下来的是一个代码格式检测的，一般公司会要求这个必须选择</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Pick a linter / formatter config: (Use arrow keys)</span><br><span class="line">&gt; ESLint with error prevention only</span><br><span class="line">  ESLint + Airbnb config</span><br><span class="line">  ESLint + Standard config</span><br><span class="line">  ESLint + Prettier</span><br></pre></td></tr></table></figure>
+
+<p>此处选择默认第一个即可，然后选择Lint的其他功能：</p>
+<ol>
+<li>保存时候Lint</li>
+<li>Git提交时候</li>
+</ol>
+<p>这里建议保存时候检测代码</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Pick additional lint features: (Press &lt;space&gt; to <span class="built_in">select</span>, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection, and &lt;enter&gt; to proceed)</span><br><span class="line">&gt;(*) Lint on save</span><br><span class="line"> ( ) Lint and fix on commit (requires Git)</span><br></pre></td></tr></table></figure>
+
+<p>回车后继续</p>
+<h3 id="配置方式"><a href="#配置方式" class="headerlink" title="配置方式"></a>配置方式</h3><p>选择Babel，ESLint等功能的配置方式：</p>
+<ol>
+<li>在专属配置文件里面</li>
+<li>在<code>package.json</code></li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? <span class="built_in">Where</span> <span class="keyword">do</span> you prefer placing config <span class="keyword">for</span> Babel, ESLint, etc.? (Use arrow keys)</span><br><span class="line">  <span class="keyword">In</span> dedicated config files</span><br><span class="line">&gt; <span class="keyword">In</span> package.json</span><br></pre></td></tr></table></figure>
+
+<p>这里博主使用的是<code>package.json</code>，可以选择在专属配置文件里面</p>
+<h3 id="另存预设"><a href="#另存预设" class="headerlink" title="另存预设"></a>另存预设</h3><p>以上的配置是否保存为一个预设，以后可以直接使用此配置</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Save this as a preset <span class="keyword">for</span> future projects? (y/N)</span><br></pre></td></tr></table></figure>
+
+<p>选择<code>Y</code>的话，需要设置一个名称，比如叫<code>setting01</code></p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Save preset as: setting01</span><br><span class="line"></span><br><span class="line">🎉  Preset tempset saved <span class="keyword">in</span> C:\Users\User\.vuerc</span><br></pre></td></tr></table></figure>
+
+<p>然后就开始自动安装了</p>
+<h3 id="配置总览"><a href="#配置总览" class="headerlink" title="配置总览"></a>配置总览</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">Vue <span class="built_in">CLI</span> v5.<span class="number">0.8</span></span><br><span class="line">? Please pick a preset: Manually <span class="built_in">select</span> features</span><br><span class="line">? Check the features needed <span class="keyword">for</span> your project: Babel, Router, Linter</span><br><span class="line">? Choose a version of Vue.js that you want to <span class="built_in">start</span> the project with <span class="number">3</span>.x</span><br><span class="line">? Use <span class="built_in">history</span> mode <span class="keyword">for</span> router? (Requires proper server setup <span class="keyword">for</span> index fallback <span class="keyword">in</span> production) Yes</span><br><span class="line">? Pick a linter / formatter config: Basic</span><br><span class="line">? Pick additional lint features: Lint on save</span><br><span class="line">? <span class="built_in">Where</span> <span class="keyword">do</span> you prefer placing config <span class="keyword">for</span> Babel, ESLint, etc.? <span class="keyword">In</span> package.json</span><br><span class="line">? Save this as a preset <span class="keyword">for</span> future projects? Yes</span><br><span class="line">? Save preset as: setting01</span><br><span class="line"></span><br><span class="line">🎉  Preset tempset saved <span class="keyword">in</span> C:\Users\User\.vuerc</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装完成"><a href="#安装完成" class="headerlink" title="安装完成"></a>安装完成</h3><p>安装完成后提示</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">🎉  Successfully created project vue3test1.</span><br><span class="line">👉  Get started with the following commands:</span><br><span class="line"></span><br><span class="line"> <span class="variable">$</span> <span class="built_in">cd</span> test02</span><br><span class="line"> <span class="variable">$</span> npm run serve</span><br></pre></td></tr></table></figure>
+
+<p>进入文件夹<code>cd test02</code>后就可以<code>npm run serve</code>然后查看创建的默认项目了</p>
+<hr>
+<p>如果需要使用Vite创建，可以使用下面的方法</p>
+<h1 id="Vite脚手架创建vue3项目"><a href="#Vite脚手架创建vue3项目" class="headerlink" title="Vite脚手架创建vue3项目"></a>Vite脚手架创建vue3项目</h1><h2 id="安装vite"><a href="#安装vite" class="headerlink" title="安装vite"></a>安装vite</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install vite@latest</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm init vite@latest</span><br><span class="line">//或者</span><br><span class="line">npm create vite@latest</span><br></pre></td></tr></table></figure>
+
+<p>流程如下：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; npm init vite@latest</span><br><span class="line">√ Project name: ... testvue</span><br><span class="line">√ Package name: ... testvue</span><br><span class="line">? Select a framework: » - Use arrow-keys. Return to submit.</span><br><span class="line">    Vanilla</span><br><span class="line">&gt;   Vue</span><br><span class="line">    React</span><br><span class="line">    Preact</span><br><span class="line">    Lit</span><br><span class="line">    Svelte</span><br><span class="line">    Solid</span><br><span class="line">    Qwik</span><br><span class="line">    Others</span><br><span class="line">? Select a framework: » - Use arrow-keys. Return to submit.</span><br><span class="line">    Vanilla</span><br><span class="line">&gt;   Vue</span><br><span class="line">    React</span><br><span class="line">√ Select a framework: » Vue</span><br><span class="line">√ Select a variant: » JavaScript</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/blog/posts/16108/</url>
     <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇帖子。查看 <a href="https://hexo.io/docs/">文档</a> 以了解更多信息。如果你在使用Hexo时遇到任何问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html">故障排除</a> 中找到答案，也可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
@@ -20,6 +130,41 @@
       <categories>
         <category>教程</category>
       </categories>
+      <tags>
+        <tag>demo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>公告</title>
+    <url>/blog/posts/31495/</url>
+    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><div class="note orange icon-padding flat"><i class="note-icon fas fa-magic"></i><p>后续即将添加新功能……</p>
+<ol>
+<li>照片墙添加内容</li>
+<li>电影电视</li>
+<li>嵌入应用</li>
+<li>一言时间轴</li>
+<li>导入博客</li>
+<li>软件资源</li>
+<li>添加侧边栏</li>
+</ol>
+</div>
+
+
+
+<h1 id="照片墙"><a href="#照片墙" class="headerlink" title="照片墙"></a>照片墙</h1><p>整理爬取照片网图数据，上传github</p>
+<div class="note warning flat"><p>直接上传仓库，或者使用图片专用仓库</p>
+</div>
+
+
+
+<h1 id="电影电视"><a href="#电影电视" class="headerlink" title="电影电视"></a>电影电视</h1><p>JerryC的友链里面，有个用户的电影内容，采用了hexo-douban插件，可以实现跳转豆瓣网页内容，分类<code>已看</code>、<code>未看</code>、<code>在看</code>等类型，分为电影、电视剧、动漫等</p>
+<h1 id="嵌入应用"><a href="#嵌入应用" class="headerlink" title="嵌入应用"></a>嵌入应用</h1><p>将一些开发的应用，或者其他源码应用添加进来，使用iframe框架</p>
+<h1 id="一言时间轴"><a href="#一言时间轴" class="headerlink" title="一言时间轴"></a>一言时间轴</h1><p>通过时间轴组件，将一些文案、一言语录添加进来，部分其他视频平台的链接通过直链方式跳转</p>
+<h1 id="导入博客"><a href="#导入博客" class="headerlink" title="导入博客"></a>导入博客</h1><p>各平台已经发布的文章重新导入到博客中，目前涉及平台：博客园，CSDN，华为开发者中心，</p>
+<h1 id="软件资源"><a href="#软件资源" class="headerlink" title="软件资源"></a>软件资源</h1><p>使用蓝奏云、阿里云盘等低限速盘或不限速盘分享软件资源。</p>
+<h1 id="添加侧边栏"><a href="#添加侧边栏" class="headerlink" title="添加侧边栏"></a>添加侧边栏</h1><p>添加侧边栏功能，加入一些常用功能的快速链接跳转，如固定文章等内容</p>
+<hr>
+]]></content>
       <tags>
         <tag>demo</tag>
       </tags>
@@ -386,151 +531,6 @@
       </categories>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>公告</title>
-    <url>/blog/posts/31495/</url>
-    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><div class="note orange icon-padding flat"><i class="note-icon fas fa-magic"></i><p>后续即将添加新功能……</p>
-<ol>
-<li>照片墙添加内容</li>
-<li>电影电视</li>
-<li>嵌入应用</li>
-<li>一言时间轴</li>
-<li>导入博客</li>
-<li>软件资源</li>
-<li>添加侧边栏</li>
-</ol>
-</div>
-
-
-
-<h1 id="照片墙"><a href="#照片墙" class="headerlink" title="照片墙"></a>照片墙</h1><p>整理爬取照片网图数据，上传github</p>
-<div class="note warning flat"><p>直接上传仓库，或者使用图片专用仓库</p>
-</div>
-
-
-
-<h1 id="电影电视"><a href="#电影电视" class="headerlink" title="电影电视"></a>电影电视</h1><p>JerryC的友链里面，有个用户的电影内容，采用了hexo-douban插件，可以实现跳转豆瓣网页内容，分类<code>已看</code>、<code>未看</code>、<code>在看</code>等类型，分为电影、电视剧、动漫等</p>
-<h1 id="嵌入应用"><a href="#嵌入应用" class="headerlink" title="嵌入应用"></a>嵌入应用</h1><p>将一些开发的应用，或者其他源码应用添加进来，使用iframe框架</p>
-<h1 id="一言时间轴"><a href="#一言时间轴" class="headerlink" title="一言时间轴"></a>一言时间轴</h1><p>通过时间轴组件，将一些文案、一言语录添加进来，部分其他视频平台的链接通过直链方式跳转</p>
-<h1 id="导入博客"><a href="#导入博客" class="headerlink" title="导入博客"></a>导入博客</h1><p>各平台已经发布的文章重新导入到博客中，目前涉及平台：博客园，CSDN，华为开发者中心，</p>
-<h1 id="软件资源"><a href="#软件资源" class="headerlink" title="软件资源"></a>软件资源</h1><p>使用蓝奏云、阿里云盘等低限速盘或不限速盘分享软件资源。</p>
-<h1 id="添加侧边栏"><a href="#添加侧边栏" class="headerlink" title="添加侧边栏"></a>添加侧边栏</h1><p>添加侧边栏功能，加入一些常用功能的快速链接跳转，如固定文章等内容</p>
-<hr>
-]]></content>
-      <tags>
-        <tag>demo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue-cli脚手架创建vue3项目</title>
-    <url>/blog/posts/38573/</url>
-    <content><![CDATA[<p><font size=5 color=#f33b45><strong>Vue-cli脚手架创建vue3项目</strong></font></p>
-<p><font size=4 color=#3399ea><strong>原创：丶无殇&emsp;&emsp;2023-02-07</strong></font></p>
-<hr>
-<p>如果需要使用vite可以跳转<a href="#vite_255">文章末尾</a></p>
-<hr>
-<h1 id="Vue-cli脚手架创建vue3项目"><a href="#Vue-cli脚手架创建vue3项目" class="headerlink" title="Vue-cli脚手架创建vue3项目"></a>Vue-cli脚手架创建vue3项目</h1><h2 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a>安装vue-cli脚手架</h2><p>执行：<code>npm install -g @vue/cli</code></p>
-<p>脚手架安装具体内容不在此赘述</p>
-<hr>
-<h2 id="创建项目（默认配置）"><a href="#创建项目（默认配置）" class="headerlink" title="创建项目（默认配置）"></a>创建项目（默认配置）</h2><p>执行<code>vue create &#123;filename&#125;</code></p>
-<p><code>&#123;filename&#125;</code>整个替换为你的项目名称，一定要<code>全部小写</code>，否则会报错：</p>
-<blockquote>
-<p>Warning: name can no longer contain capital letters</p>
-</blockquote>
-<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>输入：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">vue create test01</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">Vue <span class="built_in">CLI</span> v5.<span class="number">0.8</span></span><br><span class="line"></span><br><span class="line">? Please pick a preset:</span><br><span class="line">&gt; Default ([<span class="type">Vue</span> <span class="number">3</span>] babel, eslint) </span><br><span class="line">  Default ([<span class="type">Vue</span> <span class="number">2</span>] babel, eslint) </span><br><span class="line">  Manually <span class="built_in">select</span> features</span><br></pre></td></tr></table></figure>
-
-<p>使用<kbd>↑</kbd><kbd>↓</kbd>按键操作，<code>&gt;</code>指向的为选中的</p>
-<p>然后输入：回车</p>
-<p>输出：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">Vue <span class="built_in">CLI</span> v5.<span class="number">0.8</span></span><br><span class="line">✨  Creating project <span class="keyword">in</span> ██████████████████████████████\test01.</span><br><span class="line">⚙️  Installing <span class="built_in">CLI</span> plugins. This might take a <span class="keyword">while</span>...</span><br><span class="line"></span><br><span class="line">[██████<span class="type">............</span>] / idealTree:serve<span class="literal">-index</span>: sill fetch manifest unpipe<span class="selector-tag">@</span>~<span class="number">1.0</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-<p>然后安装好之后会显示：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">added <span class="number">102</span> packages <span class="keyword">in</span> <span class="number">20</span>s</span><br><span class="line">⚓  Running completion hooks...</span><br><span class="line"></span><br><span class="line">📄  Generating README.md...</span><br><span class="line"></span><br><span class="line">🎉  Successfully created project vue3test.</span><br><span class="line">👉  Get started with the following commands:</span><br><span class="line"></span><br><span class="line"> <span class="variable">$</span> <span class="built_in">cd</span> test01</span><br><span class="line"> <span class="variable">$</span> npm run serve</span><br></pre></td></tr></table></figure>
-
-<p>至此项目创建完成，这是默认配置的创建，如果需要手动配置，可进行以下操作</p>
-<hr>
-<h2 id="创建项目（手动配置）"><a href="#创建项目（手动配置）" class="headerlink" title="创建项目（手动配置）"></a>创建项目（手动配置）</h2><p>执行<code>vue create &#123;filename&#125;</code></p>
-<p><code>&#123;filename&#125;</code>整个替换为你的项目名称，一定要<code>全部小写</code>，否则会报错：</p>
-<blockquote>
-<p>Warning: name can no longer contain capital letters</p>
-</blockquote>
-<h3 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a>创建</h3><p>输入：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">vue create test02</span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">Vue <span class="built_in">CLI</span> v5.<span class="number">0.8</span></span><br><span class="line"></span><br><span class="line">? Please pick a preset:</span><br><span class="line">  Default ([<span class="type">Vue</span> <span class="number">3</span>] babel, eslint) </span><br><span class="line">  Default ([<span class="type">Vue</span> <span class="number">2</span>] babel, eslint) </span><br><span class="line">&gt; Manually <span class="built_in">select</span> features</span><br></pre></td></tr></table></figure>
-
-<p>使用<kbd>↑</kbd><kbd>↓</kbd>按键操作，<code>&gt;</code>指向的为选中的</p>
-<p>然后输入：回车</p>
-<h3 id="配置功能"><a href="#配置功能" class="headerlink" title="配置功能"></a>配置功能</h3><p>回车后会显示功能列表，可以根据项目的需求选择对应的功能：</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Check the features needed <span class="keyword">for</span> your project: (Press &lt;space&gt; to <span class="built_in">select</span>, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection, and &lt;enter&gt; to proceed)</span><br><span class="line">&gt;(*) Babel</span><br><span class="line"> ( ) TypeScript</span><br><span class="line"> ( ) Progressive Web App (PWA) Support</span><br><span class="line"> ( ) Router</span><br><span class="line"> ( ) Vuex</span><br><span class="line"> ( ) CSS Pre<span class="literal">-processors</span></span><br><span class="line"> (*) Linter / Formatter</span><br><span class="line"> ( ) Unit Testing</span><br><span class="line"> ( ) E2E Testing</span><br></pre></td></tr></table></figure>
-
-<p>此时，可以通过<kbd>空格(Space)</kbd>进行选择和取消选择，<kbd>a</kbd>全选，<kbd>i</kbd>反选，<kbd>回车(Enter)</kbd>继续</p>
-<p><code>Router</code>和<code>Vuex</code>一般会用上，如果是单页应用可以不选择</p>
-<p>选择完成后回车</p>
-<h3 id="版本选择"><a href="#版本选择" class="headerlink" title="版本选择"></a>版本选择</h3><p>然后根据项目需求选择<code>Vue.js</code>的版本</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Choose a version of Vue.js that you want to <span class="built_in">start</span> the project with (Use arrow keys)</span><br><span class="line">&gt; <span class="number">3</span>.x</span><br><span class="line">  <span class="number">2</span>.x</span><br></pre></td></tr></table></figure>
-
-<p>现在大多是<code>Vue3</code>，所以选择默认的<code>3.x</code>后回车即可</p>
-<h3 id="History模式"><a href="#History模式" class="headerlink" title="History模式"></a>History模式</h3><p>此处需要选择<code>是否使用路由的历史记录模式</code>，一般选择是，也可根据项目需求来</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Use <span class="built_in">history</span> mode <span class="keyword">for</span> router? (Requires proper server setup <span class="keyword">for</span> index fallback <span class="keyword">in</span> production) (Y/n) </span><br></pre></td></tr></table></figure>
-
-<p>输入<code>Y</code>后回车</p>
-<h3 id="格式检测"><a href="#格式检测" class="headerlink" title="格式检测"></a>格式检测</h3><p>接下来的是一个代码格式检测的，一般公司会要求这个必须选择</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Pick a linter / formatter config: (Use arrow keys)</span><br><span class="line">&gt; ESLint with error prevention only</span><br><span class="line">  ESLint + Airbnb config</span><br><span class="line">  ESLint + Standard config</span><br><span class="line">  ESLint + Prettier</span><br></pre></td></tr></table></figure>
-
-<p>此处选择默认第一个即可，然后选择Lint的其他功能：</p>
-<ol>
-<li>保存时候Lint</li>
-<li>Git提交时候</li>
-</ol>
-<p>这里建议保存时候检测代码</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Pick additional lint features: (Press &lt;space&gt; to <span class="built_in">select</span>, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection, and &lt;enter&gt; to proceed)</span><br><span class="line">&gt;(*) Lint on save</span><br><span class="line"> ( ) Lint and fix on commit (requires Git)</span><br></pre></td></tr></table></figure>
-
-<p>回车后继续</p>
-<h3 id="配置方式"><a href="#配置方式" class="headerlink" title="配置方式"></a>配置方式</h3><p>选择Babel，ESLint等功能的配置方式：</p>
-<ol>
-<li>在专属配置文件里面</li>
-<li>在<code>package.json</code></li>
-</ol>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? <span class="built_in">Where</span> <span class="keyword">do</span> you prefer placing config <span class="keyword">for</span> Babel, ESLint, etc.? (Use arrow keys)</span><br><span class="line">  <span class="keyword">In</span> dedicated config files</span><br><span class="line">&gt; <span class="keyword">In</span> package.json</span><br></pre></td></tr></table></figure>
-
-<p>这里博主使用的是<code>package.json</code>，可以选择在专属配置文件里面</p>
-<h3 id="另存预设"><a href="#另存预设" class="headerlink" title="另存预设"></a>另存预设</h3><p>以上的配置是否保存为一个预设，以后可以直接使用此配置</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Save this as a preset <span class="keyword">for</span> future projects? (y/N)</span><br></pre></td></tr></table></figure>
-
-<p>选择<code>Y</code>的话，需要设置一个名称，比如叫<code>setting01</code></p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">? Save preset as: setting01</span><br><span class="line"></span><br><span class="line">🎉  Preset tempset saved <span class="keyword">in</span> C:\Users\User\.vuerc</span><br></pre></td></tr></table></figure>
-
-<p>然后就开始自动安装了</p>
-<h3 id="配置总览"><a href="#配置总览" class="headerlink" title="配置总览"></a>配置总览</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">Vue <span class="built_in">CLI</span> v5.<span class="number">0.8</span></span><br><span class="line">? Please pick a preset: Manually <span class="built_in">select</span> features</span><br><span class="line">? Check the features needed <span class="keyword">for</span> your project: Babel, Router, Linter</span><br><span class="line">? Choose a version of Vue.js that you want to <span class="built_in">start</span> the project with <span class="number">3</span>.x</span><br><span class="line">? Use <span class="built_in">history</span> mode <span class="keyword">for</span> router? (Requires proper server setup <span class="keyword">for</span> index fallback <span class="keyword">in</span> production) Yes</span><br><span class="line">? Pick a linter / formatter config: Basic</span><br><span class="line">? Pick additional lint features: Lint on save</span><br><span class="line">? <span class="built_in">Where</span> <span class="keyword">do</span> you prefer placing config <span class="keyword">for</span> Babel, ESLint, etc.? <span class="keyword">In</span> package.json</span><br><span class="line">? Save this as a preset <span class="keyword">for</span> future projects? Yes</span><br><span class="line">? Save preset as: setting01</span><br><span class="line"></span><br><span class="line">🎉  Preset tempset saved <span class="keyword">in</span> C:\Users\User\.vuerc</span><br></pre></td></tr></table></figure>
-
-<h3 id="安装完成"><a href="#安装完成" class="headerlink" title="安装完成"></a>安装完成</h3><p>安装完成后提示</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">🎉  Successfully created project vue3test1.</span><br><span class="line">👉  Get started with the following commands:</span><br><span class="line"></span><br><span class="line"> <span class="variable">$</span> <span class="built_in">cd</span> test02</span><br><span class="line"> <span class="variable">$</span> npm run serve</span><br></pre></td></tr></table></figure>
-
-<p>进入文件夹<code>cd test02</code>后就可以<code>npm run serve</code>然后查看创建的默认项目了</p>
-<hr>
-<p>如果需要使用Vite创建，可以使用下面的方法</p>
-<h1 id="Vite脚手架创建vue3项目"><a href="#Vite脚手架创建vue3项目" class="headerlink" title="Vite脚手架创建vue3项目"></a>Vite脚手架创建vue3项目</h1><h2 id="安装vite"><a href="#安装vite" class="headerlink" title="安装vite"></a>安装vite</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install vite@latest</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm init vite@latest</span><br><span class="line">//或者</span><br><span class="line">npm create vite@latest</span><br></pre></td></tr></table></figure>
-
-<p>流程如下：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&gt; npm init vite@latest</span><br><span class="line">√ Project name: ... testvue</span><br><span class="line">√ Package name: ... testvue</span><br><span class="line">? Select a framework: » - Use arrow-keys. Return to submit.</span><br><span class="line">    Vanilla</span><br><span class="line">&gt;   Vue</span><br><span class="line">    React</span><br><span class="line">    Preact</span><br><span class="line">    Lit</span><br><span class="line">    Svelte</span><br><span class="line">    Solid</span><br><span class="line">    Qwik</span><br><span class="line">    Others</span><br><span class="line">? Select a framework: » - Use arrow-keys. Return to submit.</span><br><span class="line">    Vanilla</span><br><span class="line">&gt;   Vue</span><br><span class="line">    React</span><br><span class="line">√ Select a framework: » Vue</span><br><span class="line">√ Select a variant: » JavaScript</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>
